@@ -1,0 +1,564 @@
+Test search with const rootD from testData.mjs
+
+findings: 
+
+///Big Major///
+1)Lots of duplicates eg: 
+
+6  matches found for  [ 'x', 'x', 'o', 2, 3, 2 ] name:  M
+1) : name: DM x,x,o,2,3,2
+2) : name: DM x,x,o,2,3,2
+3) : name: DM x,x,o,2,3,2
+4) : name: DM x,x,o,2,3,2
+5) : name: DM x,x,o,2,3,2
+6) : name: DM x,x,o,2,3,2
+
+-conclusion: algorithm to remove duplicates needed. 
+-remove duplicates from same type- "6s", "5s", or consecutive note categories
+
+
+2) { type: '#11', notes: [ 'x', 5, 6, 6, 7, 5 ] }  NOT FOUND
+-conclusion: sharp 11 not in a key? - add to "special chords"
+
+3)D 6/9 not found- only other chords with same notes
+4  matches found for  [ 10, 'x', 'x', 11, 12, 12 ] name:  6/9
+1) : name: Bmadd4 10,x,x,11,12,12
+2) : name: Bmadd4 10,x,x,11,12,12
+3) : name: Bmadd4 10,x,x,11,12,12
+4) : name: G#/Abhalfdim11b13 10,x,x,11,12,12
+
+-determine if in key and where to add
+
+3) add2 vs add9 
+3  matches found for  [ 10, 'x', 'x', 11, 10, 12 ] name:  add9
+1) : name: Dadd2 10,x,x,11,10,12
+2) : name: Dadd2 10,x,x,11,10,12
+3) : name: Dadd2 10,x,x,11,10,12
+
+////Big Minor ////
+1) search for minor gives Bhalfdim
+8  matches found for  [ 'x', 'x', 'o', 2, 3, 1 ] name:  m
+-Bhalfdim - B,D,F,A
+-x,x,D,A,D,F
+-one voicing for B half dim drops the 1 - OK
+-conclusion: OK 
+
+2) 13th fret 
+{ type: 'halfdim', notes: [ 10, 11, 12, 13, 13, 13 ] }  NOT FOUND
+
+3)min7b9 not found- not in key? -add to special chords
+
+4) min9 not found
+{ type: 'm9', notes: [ 10, 12, 10, 10, 10, 12 ] }  NOT FOUND
+-notes are D,A,C,F,A,E
+-minor9 is D,F,A,C,E
+-conclusion: UNKNOWN
+
+5){ type: 'minmaj7', notes: [ 'x', 5, 7, 6, 6, 5 ] }  NOT FOUND
+-not in a key 
+
+///Big Dominant/////
+1) { type: 'dom7b5', notes: [ 'x', 'x', 'o', 1, 1, 2 ] }  NOT FOUND
+{ type: 'dom7#5', notes: [ 'x', 5, 8, 5, 7, 6 ] }  NOT FOUND
+{ type: 'dom7#5', notes: [ 10, 9, 10, 11, 11, 'x' ] }  NOT FOUND
+{ type: 'dom7b9', notes: [ 10, 'x', 10, 11, 10, 11 ] }  NOT FOUND
+-not in key?
+
+2) { type: '9', notes: [ 10, 12, 10, 11, 10, 12 ] }  NOT FOUND
+this 9 WAS found: 
+2  matches found for  [ 'x', 5, 4, 5, 5, 'x' ] name:  9
+1) : name: D9 x,5,4,5,5,x
+2) : name: D9 x,5,4,5,5,x
+-UNKNOWN
+
+3) 
+{ type: 'dom7#9', notes: [ 'x', 'x', 12, 11, 13, 13 ] }  NOT FOUND
+{ type: 'dom7#9', notes: [ 'x', 5, 4, 5, 6, 'x' ] }  NOT FOUND
+{ type: 'dom7#9', notes: [ 10, 'x', 10, 11, 10, 13 ] }  NOT FOUND
+{ type: 'dom7#9', notes: [ 10, 'x', 10, 11, 13, 13 ] }  NOT FOUND
+-not in key?
+
+
+///Big Augmented ////
+1) 
+{ type: 'aug', notes: [ 'x', 9, 8, 7, 7, 'x' ] }  NOT FOUND
+{ type: 'aug', notes: [ 'x', 13, 12, 11, 11, 'x' ] }  NOT FOUND
+{ type: 'aug', notes: [ 10, 'x', 12, 11, 11, 10 ] }  NOT FOUND
+{ type: 'aug', notes: [ 'x', 5, 4, 3, 3, 'x' ] }  NOT FOUND
+{ type: 'aug', notes: [ 10, 9, 8, 7, 'x', 'x' ] }  NOT FOUND
+-not in key? 
+
+///Big Diminished ////
+1) { type: 'dim', notes: [ 10, 'x', 9, 10, 9, 10 ] }  NOT FOUND
+-UNKNOWN
+2) { type: 'halfdim', notes: [ 10, 11, 12, 13, 13, 13 ] }  NOT FOUND
+-13th fret
+
+///Big stacked fifths /////
+1) add 6/9 found other chords
+3  matches found for  [ 'x', 5, 7, 'x', 5, 7 ] name:  add6/9
+1) : name: Bm11 x,5,7,x,5,7
+2) : name: Bm11b9 x,5,7,x,5,7
+3) : name: Bm11 x,5,7,x,5,7
+-add the add 6/9 chord
+
+2) 36  matches found for  [ 'x', 5, 7, 7, 5, 5 ] name:  5add9
+-x,D,A,D,E,A
+-Dsus2- D,E,A
+-OK
+
+3)36  matches found for  [ 'x', 5, 7, 7, 8, 'x' ] name:  5sus4
+-OK
+
+////Compact Major /////
+1) add2 vs add9
+6  matches found for  [ 'x', 'x', 12, 11, 10, 12 ] name:  add9
+1) : name: Dadd2 x,x,12,11,10,12
+
+///Compact Minor ///
+1) 8  matches found for  [ 'x', 'x', 'x', 7, 6, 5 ] name:  m
+including Bhalfdim
+-check 
+
+2) 2  matches found for  [ 10, 8, 10, 8, 'x', 'x' ] name:  m7b9
+1) : name: Dm7b9 10,8,10,8,x,x
+2) : name: Dm7b9 10,8,10,8,x,x
+-so m7b9 is in a key? - check 
+
+///Compact Dominant ///
+1) 
+2  matches found for  [ 1, 2, 'o', 'x', 'x', 'x' ] name:  7
+1) : name: Bdim 1,2,o,x,x,x
+2) : name: Bdim 1,2,o,x,x,x
+-data entry error- should have been 2,3,o,x,x,x- fixed 
+
+2) 
+{ type: 'dom7#5', notes: [ 'x', 5, 8, 5, 7, 6 ] }  NOT FOUND
+{ type: 'dom7#5', notes: [ 10, 13, 10, 11, 'x', 'x' ] }  NOT FOUND
+
+////compact diminished ////
+
+***
+-dimished 7 chord - Scale intervals: 1 - b3 - b5 - bb7
+Notes in the chord: D - F - Ab - B
+**harmonic minor scale
+
+dim - Scale intervals: 1 - b3 - b5
+notes in the chord: D - F - Ab
+
+halfdim(m7b5)
+scale intervals: 1 - b3 - b5 - b7
+notes in the chord: D - F - Ab - C
+***
+
+
+1) { type: 'dim', notes: [ 'x', 'x', 'o', 1, 'o', 1 ] }  NOT FOUND
+-x,x,D,G#,B,F 
+-note in Ddim- D,F,G#
+-conclusion diminished 7th- exists in harmonic minor 
+
+2) 
+4  matches found for  [ 'x', 5, 6, 3, 6, 'x' ] name:  dim
+1) : name: A#/Bb7 x,5,6,3,6,x
+2) : name: A#/Bb7 x,5,6,3,6,x
+3) : name: Ddimaddb6 x,5,6,3,6,x
+4) : name: Ddimaddb6 x,5,6,3,6,x
+
+-#3 and 4 - x,D,G#,B,F,x
+-conclusion- diminished 7th- harmonic minor 
+
+**** conclusion: Look into adding harmonic minor chords ****
+
+3) 
+{ type: 'dim', notes: [ 10, 11, 9, 10, 'x', 'x' ] }  NOT FOUND- D G# B F
+{ type: 'dim', notes: [ 'x', 'x', 3, 4, 3, 4 ] }  NOT FOUND- same
+{ type: 'dim', notes: [ 'x', 8, 9, 7, 9, 'x' ] }  NOT FOUND- same
+{ type: 'dim', notes: [ 1, 2, 'o', 1, 'x', 'x' ] }  NOT FOUND- same
+{ type: 'dim', notes: [ 'x', 'x', 6, 7, 6, 7 ] }  NOT FOUND- same
+{ type: 'dim', notes: [ 'x', 11, 12, 10, 12, 'x' ] }  NOT FOUND
+{ type: 'dim', notes: [ 4, 5, 3, 4, 'x', 'x' ] }  NOT FOUND
+{ type: 'dim', notes: [ 'x', 'x', 9, 10, 9, 10 ] }  NOT FOUND
+{ type: 'dim', notes: [ 'x', 2, 3, 1, 3, 'x' ] }  NOT FOUND
+{ type: 'dim', notes: [ 7, 8, 6, 7, 'x', 'x' ] }  NOT FOUND
+
+-conclusion- all above are diminished 7- harmonic minor
+
+4) 
+2  matches found for  [ 'x', 'x', 10, 10, 9, 10 ] name:  halfdim
+1) : name: Fmadd6 x,x,10,10,9,10
+2) : name: Fmadd6 x,x,10,10,9,10
+
+-only 2 matches for Fmadd6 (has same notes as halfdim), but no halfdim found 
+-notes- x,x,C,F,G#,D
+-notes in halfdim chord - D,F,G#,C
+-conclusion: UNKNOWN
+
+5) same problem 
+2  matches found for  [ 'x', 3, 3, 1, 3, 'x' ] name:  halfdim
+1) : name: Fmadd6 x,3,3,1,3,x
+2) : name: Fmadd6 x,3,3,1,3,x
+
+-notes: C,F,G#,D
+-notes in a halfdim chord - same 
+-conclusion: UNKNOWN
+
+6)
+{ type: 'halfdim', notes: [ 8, 9, 6, 7, 'x', 'x' ] }  NOT FOUND
+-notes-C,F#,G#,D
+-this one is an anomaly bc of the presence of F#
+conclusion-UNKNOWN
+
+***** Conclusion about 1-5 above - may be 3rd inversion ********
+
+/////Compact Augmented ////////
+1) no augmented chords found- add augmented chords
+
+/////compact stacked fifths //////
+1){ type: '5', notes: [ 'x', 'x', 'x', 'x', 3, 5 ] }  NOT FOUND
+-conclusion: havent added fifths yet 
+
+2) 10  matches found for  [ 'x', 'x', 'x', 7, 10, 'x' ] name:  5
+-only found 7th chords that are not root D
+conclusion: 7ths have voicings with only 2 Notes and havent added 5ths yet 
+
+3) 36  matches found for  [ 'x', 'x', 'x', 12, 10, 10 ] name:  5sus
+-notes- x, x, x, G, A, D
+-eg Gsus2 notes are G,A,D
+conclusion: OK
+
+4) 18  matches found for  [ 'x', 'x', 2, 'x', 3, 5 ] name:  5add9
+but no matches for D5add9
+-conclusion: add 5add9 chords
+
+5) 
+{ type: '5add6/9', notes: [ 'x', 'x', 2, 4, 3, 5 ] }  NOT FOUND
+{ type: '5add6/9', notes: [ 'x', 7, 9, 7, 10, 'x' ] }  NOT FOUND
+{ type: '5add6/9', notes: [ 'o', 2, 'o', 2, 'x', 'x' ] }  NOT FOUND
+-conclusion: add 6/9 chords 
+
+/////Vivid Major /////
+1) 
+4  matches found for  [ 'x', 'x', 11, 11, 10, 10 ] name:  M7
+1) : name: F#/Gbmaddb6 x,x,11,11,10,10
+2) : name: F#/Gbmaddb6 x,x,11,11,10,10
+3) : name: F#/Gbmaddb6 x,x,11,11,10,10
+4) : name: F#/Gbmaddb6 x,x,11,11,10,10
+but no matches for DM7
+
+-notes: C#,F#,A,D
+Notes in the chord: D - F# - A - C#
+-conclusion: 3rd inversion 
+
+
+2) 
+4  matches found for  [ 'x', 4, 4, 2, 3, 'x' ] name:  M7
+1) : name: F#/Gbmaddb6 x,4,4,2,3,x
+2) : name: F#/Gbmaddb6 x,4,4,2,3,x
+3) : name: F#/Gbmaddb6 x,4,4,2,3,x
+4) : name: F#/Gbmaddb6 x,4,4,2,3,x
+-conclusion: 3rd inversion 
+
+3) 
+4  matches found for  [ 9, 9, 7, 7, 'x', 'x' ] name:  M7
+1) : name: F#/Gbmaddb6 9,9,7,7,x,x
+2) : name: F#/Gbmaddb6 9,9,7,7,x,x
+3) : name: F#/Gbmaddb6 9,9,7,7,x,x
+4) : name: F#/Gbmaddb6 9,9,7,7,x,x
+-3rd inversion 
+
+5)2 instances of M9 with C as root - 3rd inversion 
+-conclusion- 3rd inversion
+
+6) { type: '6/9', notes: [ 'x', 'x', 9, 11, 10, 12 ] }  NOT FOUND
+{ type: '6/9', notes: [ 'x', 2, 4, 2, 5, 'x' ] }  NOT FOUND
+{ type: '6/9', notes: [ 7, 9, 7, 9, 'x', 'x' ] }  NOT FOUND
+
+-conclusion: difference between 6/9 and add6/9 
+
+7){ type: 'M7#11', notes: [ 'x', 'x', 6, 7, 7, 9 ] }  NOT FOUND
+{ type: 'M7#11', notes: [ 4, 5, 4, 6, 'x', 'x' ] }  NOT FOUND
+-conclusion: not in key? 
+
+8) 
+2  matches found for  [ 'x', 'x', 11, 11, 9, 10 ] name:  M7#11
+1) : name: DM9#11 x,x,11,11,9,10
+2) : name: DM9#11 x,x,11,11,9,10
+-conclusion: same as M9#11 ? 
+
+9) same as 8
+1) : name: DM9#11 x,x,o,1,2,2
+2) : name: DM9#11 x,x,o,1,2,2
+2  matches found for  [ 'x', 5, 6, 6, 7, 'x' ] name:  M7#11
+1) : name: DM9#11 x,5,6,6,7,x
+2) : name: DM9#11 x,5,6,6,7,x
+2  matches found for  [ 10, 11, 11, 11, 'x', 'x' ] name:  M7#11
+1) : name: DM9#11 10,11,11,11,x,x
+2) : name: DM9#11 10,11,11,11,x,x
+
+/////Vivid Minor ///////
+
+1) 
+6  matches found for  [ 'x', 'x', 'x', 2, 1, 1 ] name:  m7
+1) : name: FM x,x,x,2,1,1
+2) : name: FM x,x,x,2,1,1
+3) : name: FM x,x,x,2,1,1
+4) : name: FM x,x,x,2,1,1
+5) : name: FM x,x,x,2,1,1
+6) : name: FM x,x,x,2,1,1
+-notes in Dm7- D,F,A,C
+-this chord is A,C,F- so includes 3,5,7
+6  matches found for  [ 'x', 'x', 7, 5, 6, 'x' ] name:  m7
+1) : name: FM x,x,7,5,6,x
+2) : name: FM x,x,7,5,6,x
+3) : name: FM x,x,7,5,6,x
+4) : name: FM x,x,7,5,6,x
+5) : name: FM x,x,7,5,6,x
+6) : name: FM x,x,7,5,6,x
+-notes in Dm7- D,F,A,C
+-this chord is A,C,F- so includes 3,5,7
+6  matches found for  [ 'x', 12, 10, 10, 'x', 'x' ] name:  m7
+1) : name: FM x,12,10,10,x,x
+2) : name: FM x,12,10,10,x,x
+3) : name: FM x,12,10,10,x,x
+4) : name: FM x,12,10,10,x,x
+5) : name: FM x,12,10,10,x,x
+6) : name: FM x,12,10,10,x,x
+-notes in Dm7- D,F,A,C
+-this chord is A,C,F- so includes 3,5,7
+6  matches found for  [ 5, 3, 3, 'x', 'x', 'x' ] name:  m7
+1) : name: FM 5,3,3,x,x,x
+2) : name: FM 5,3,3,x,x,x
+3) : name: FM 5,3,3,x,x,x
+4) : name: FM 5,3,3,x,x,x
+5) : name: FM 5,3,3,x,x,x
+6) : name: FM 5,3,3,x,x,x
+-notes in Dm7- D,F,A,C
+-this chord is A,C,F- so includes 3,5,7
+
+-so Dm7 not found for any of these
+-each voicing is 3,5,7- not an included voicing in extendedChords
+
+2) 
+6  matches found for  [ 'x', 'x', 10, 10, 10, 10 ] name:  m7
+1) : name: Fadd6 x,x,10,10,10,10
+2) : name: Fadd6 x,x,10,10,10,10
+3) : name: Fadd6 x,x,10,10,10,10
+4) : name: Fadd6 x,x,10,10,10,10
+5) : name: Fadd6 x,x,10,10,10,10
+6) : name: Fadd6 x,x,10,10,10,10
+-notes in this chord - C,F,A,D 
+-conslusion: 3rd inversion
+
+3) 
+6  matches found for  [ 'x', 3, 3, 2, 3, 'x' ] name:  m7
+1) : name: Fadd6 x,3,3,2,3,x
+2) : name: Fadd6 x,3,3,2,3,x
+3) : name: Fadd6 x,3,3,2,3,x
+4) : name: Fadd6 x,3,3,2,3,x
+5) : name: Fadd6 x,3,3,2,3,x
+6) : name: Fadd6 x,3,3,2,3,x
+-C,F,A,D
+6  matches found for  [ 8, 8, 7, 7, 'x', 'x' ] name:  m7
+1) : name: Fadd6 8,8,7,7,x,x
+2) : name: Fadd6 8,8,7,7,x,x
+3) : name: Fadd6 8,8,7,7,x,x
+4) : name: Fadd6 8,8,7,7,x,x
+5) : name: Fadd6 8,8,7,7,x,x
+6) : name: Fadd6 8,8,7,7,x,x
+-C,F,A,D5add9
+
+-conclusion for above - 3rd inversion 
+
+4) 
+2  matches found for  [ 'x', 'x', 10, 10, 9, 10 ] name:  halfdim
+1) : name: Fmadd6 x,x,10,10,9,10
+2) : name: Fmadd6 x,x,10,10,9,10
+-conclusion: 3rd inversion 
+
+5) 
+4  matches found for  [ 'x', 'x', 10, 10, 10, 11 ] name:  min7b9
+1) : name: F7 x,x,10,10,10,11
+2) : name: F7 x,x,10,10,10,11
+3) : name: Adimaddb6 x,x,10,10,10,11
+4) : name: Adimaddb6 x,x,10,10,10,11
+
+-m7b9 not in key? 
+
+6) 
+8  matches found for  [ 'x', 'x', 10, 10, 10, 12 ] name:  m9
+1) : name: FM7 x,x,10,10,10,12
+2) : name: FM7 x,x,10,10,10,12
+3) : name: Amaddb6 x,x,10,10,10,12
+4) : name: Amaddb6 x,x,10,10,10,12
+5) : name: FM7 x,x,10,10,10,12
+6) : name: FM7 x,x,10,10,10,12
+7) : name: Amaddb6 x,x,10,10,10,12
+8) : name: Amaddb6 x,x,10,10,10,12
+-notes : C,F,A,E
+-notes in chord:  D - F - A - C - E
+-conclusion: 3rd inversion 
+
+****** need 4th inversion ??? *****
+eg D F A C E 
+1st F A C E D
+2ND ACEDF 
+3RD CEDFA
+4TH EDFAC
+
+-so 5 notes- can do 4th inversion - but do any 5 note chords 
+have voicings that are 5 notes? 
+
+7) 
+4  matches found for  [ 'x', 'x', 2, 2, 1, 1 ] name:  m9
+1) : name: Amaddb6 x,x,2,2,1,1
+2) : name: Amaddb6 x,x,2,2,1,1
+3) : name: Amaddb6 x,x,2,2,1,1
+4) : name: Amaddb6 x,x,2,2,1,1
+-E A C F (9,5,7,3)
+-notes in m9- D F A C E 
+-conclusion: 4th inversion and 1 dropped but not 5 
+
+8) 
+4  matches found for  [ 'x', 7, 7, 5, 6, 'x' ] name:  m9
+1) : name: Amaddb6 x,7,7,5,6,x
+2) : name: Amaddb6 x,7,7,5,6,x
+3) : name: Amaddb6 x,7,7,5,6,x
+4) : name: Amaddb6 x,7,7,5,6,x
+4  matches found for  [ 12, 12, 10, 10, 'x', 'x' ] name:  m9
+1) : name: Amaddb6 12,12,10,10,x,x
+2) : name: Amaddb6 12,12,10,10,x,x
+3) : name: Amaddb6 12,12,10,10,x,x
+4) : name: Amaddb6 12,12,10,10,x,x
+
+-conclusion- E is root for both- 4th inversion 
+-both drop 1 and not 5
+-so 3,5,7,9,- neeed this voicing ? 
+
+9)all minmaj7 chords not found
+-conclusion: not in key? 
+
+/////Vivid Dominant ////////
+1) no matches for 7 chord 
+2  matches found for  [ 'x', 'x', 10, 11, 10, 10 ] name:  7
+1) : name: F#/Gbdimaddb6 x,x,10,11,10,10
+2) : name: F#/Gbdimaddb6 x,x,10,11,10,1
+-notes- C, F#, A, D
+Notes in the chord: D - F# - A - C
+-conclusion: 3rd inversion 
+
+2) 
+2  matches found for  [ 'x', 3, 4, 2, 3, 'x' ] name:  7
+1) : name: F#/Gbdimaddb6 x,3,4,2,3,x
+2) : name: F#/Gbdimaddb6 x,3,4,2,3,x
+2  matches found for  [ 8, 9, 7, 7, 'x', 'x' ] name:  7
+1) : name: F#/Gbdimaddb6 8,9,7,7,x,x
+2) : name: F#/Gbdimaddb6 8,9,7,7,x,x
+-for 2 above- 3rd inversion 
+
+2  matches found for  [ 'x', 'x', 'x', 2, 1, 2 ] name:  7
+1) : name: F#/Gbdim x,x,x,2,1,2
+2) : name: F#/Gbdim x,x,x,2,1,2
+-notes-A,C,F#
+-voicing- 3,5,7- so no 1
+Notes in the chord: D - F# - A - C
+conclusion: 3,5,7 voicing - no 1
+
+2  matches found for  [ 'x', 'x', 7, 5, 7, 'x' ] name:  7
+1) : name: F#/Gbdim x,x,7,5,7,x
+2) : name: F#/Gbdim x,x,7,5,7,x
+2  matches found for  [ 'x', 12, 10, 11, 'x', 'x' ] name:  7
+1) : name: F#/Gbdim x,12,10,11,x,x
+2) : name: F#/Gbdim x,12,10,11,x,x
+2  matches found for  [ 5, 3, 4, 'x', 'x', 'x' ] name:  7
+1) : name: F#/Gbdim 5,3,4,x,x,x
+2) : name: F#/Gbdim 5,3,4,x,x,x
+
+3) chords not found 
+
+{ type: 'dom7b5', notes: [ 'x', 'x', 6, 7, 7, 8 ] }  NOT FOUND
+{ type: 'dom7b5', notes: [ 'x', 11, 12, 11, 13, 'x' ] }  NOT FOUND
+{ type: 'dom7b5', notes: [ 4, 5, 4, 5, 'x', 'x' ] }  NOT FOUND
+{ type: 'dom7b5', notes: [ 'x', 'x', 'o', 1, 1, 2 ] }  NOT FOUND
+{ type: 'dom7b5', notes: [ 'x', 5, 6, 5, 7, 'x' ] }  NOT FOUND
+{ type: 'dom7b5', notes: [ 10, 11, 10, 11, 'x', 'x' ] }  NOT FOUND
+{ type: 'dom7b5', notes: [ 'x', 'x', 10, 11, 9, 10 ] }  NOT FOUND
+{ type: 'dom7b5', notes: [ 'x', 3, 4, 1, 3, 'x' ] }  NOT FOUND
+{ type: 'dom7b5', notes: [ 'x', 'x', 4, 5, 3, 4 ] }  NOT FOUND
+{ type: 'dom7b5', notes: [ 'x', 9, 10, 7, 9, 'x' ] }  NOT FOUND
+{ type: 'dom7b5', notes: [ 2, 3, 'o', 1, 'x', 'x' ] }  NOT FOUND
+{ type: 'dom7#5', notes: [ 'x', 'x', 8, 7, 7, 8 ] }  NOT FOUND
+{ type: 'dom7#5', notes: [ 'x', 13, 12, 11, 13, 'x' ] }  NOT FOUND
+{ type: 'dom7#5', notes: [ 6, 5, 4, 5, 'x', 'x' ] }  NOT FOUND
+{ type: 'dom7#5', notes: [ 'x', 'x', 10, 11, 11, 10 ] }  NOT FOUND
+{ type: 'dom7#5', notes: [ 'x', 3, 4, 3, 3, 'x' ] }  NOT FOUND
+{ type: 'dom7#5', notes: [ 8, 9, 8, 7, 'x', 'x' ] }  NOT FOUND
+{ type: 'dom7b9', notes: [ 'x', 'x', 12, 11, 13, 11 ] }  NOT FOUND
+{ type: 'dom7b9', notes: [ 'x', 5, 4, 5, 4, 'x' ] }  NOT FOUND
+{ type: 'dom7b9', notes: [ 'x', 'x', 10, 11, 10, 11 ] }  NOT FOUND
+{ type: 'dom7b9', notes: [ 8, 9, 7, 8, 'x', 'x' ] }  NOT FOUND
+{ type: 'dom7b9', notes: [ 'x', 'x', 1, 2, 1, 2 ] }  NOT FOUND
+{ type: 'dom7b9', notes: [ 'x', 6, 7, 5, 7, 'x' ] }  NOT FOUND
+{ type: 'dom7b9', notes: [ 11, 12, 10, 11, 'x', 'x' ] }  NOT FOUND
+
+4) not found 
+2  matches found for  [ 'x', 'x', 'x', 5, 4, 2 ] name:  dom7b9
+1) : name: Cdim x,x,x,5,4,2
+2) : name: Cdim x,x,x,5,4,2
+
+5) not found
+6  matches found for  [ 'x', 'x', 10, 11, 10, 12 ] name:  9
+1) : name: Amadd6 x,x,10,11,10,12
+2) : name: Amadd6 x,x,10,11,10,12
+3) : name: F#/Gbhalfdim x,x,10,11,10,12
+4) : name: F#/Gbhalfdim x,x,10,11,10,12
+5) : name: F#/Gbhalfdim x,x,10,11,10,12
+6) : name: F#/Gbhalfdim x,x,10,11,10,12
+-C,F#,A,E 
+Notes in the chord: D - F# - A - C - E
+conclusion: 3rd inversion and dropped 1 
+
+6) other 9 chords not found 
+6  matches found for  [ 8, 9, 7, 9, 'x', 'x' ] name:  9
+1) : name: Amadd6 8,9,7,9,x,x
+2) : name: Amadd6 8,9,7,9,x,x
+3) : name: F#/Gbhalfdim 8,9,7,9,x,x
+4) : name: F#/Gbhalfdim 8,9,7,9,x,x
+5) : name: F#/Gbhalfdim 8,9,7,9,x,x
+6) : name: F#/Gbhalfdim 8,9,7,9,x,x
+-C,F#,A,E
+Notes in the chord: D - F# - A - C - E
+-conclusion: 3rd inversion 
+
+2  matches found for  [ 'x', 'x', 2, 2, 1, 2 ] name:  9
+1) : name: Amadd6 x,x,2,2,1,2
+2) : name: Amadd6 x,x,2,2,1,2
+-E,A,C,F#
+-conclusion: dropped 1 and 4th inversion 
+ 
+ ******** 4th inversion **************
+
+2  matches found for  [ 'x', 7, 7, 5, 7, 'x' ] name:  9
+1) : name: Amadd6 x,7,7,5,7,x
+2) : name: Amadd6 x,7,7,5,7,x
+-E,A,C,F#
+Notes in the chord: D - F# - A - C - E
+-dropped 1 and 4th inversion 
+
+2  matches found for  [ 12, 12, 10, 11, 'x', 'x' ] name:  9
+1) : name: Amadd6 12,12,10,11,x,x
+2) : name: Amadd6 12,12,10,11,x,x
+-E,A,C,F#
+-conclusion: 4th inversion and dropped 1 
+
+7){ type: 'dom7#9', notes: [ 'x', 'x', 'x', 11, 13, 13 ] }  NOT FOUND
+-not in key? 
+
+8) dom7#9 - only found other chords - not in key? 
+
+/////Vivid Diminished /////////////
+
+1)
+8  matches found for  [ 3, 2, 2, 'x', 'x', 'x' ] name:  halfdim
+-notes: Ab,C,F
+notes in chord : D - F - Ab - C
+-conclusion: only 1 dropped: voicing 3,5,7-add voicing? 

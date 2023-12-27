@@ -1,0 +1,146 @@
+////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////
+///////////// FINAL CONCLUSIONS AND ACTIONS TO TAKE  //////////////
+///////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////
+1) third inversion- if voicing has 4 or more notes, do third inversion 
+-or, do third inversion on every voicing and remove duplicates afterword 
+2) fourth inversion- if voicing has 5 or more notes, do fourth inversion 
+-or, do fourth inversion on every chord and remove duplicates afterword
+3)remove duplicates- start with remove duplicates for each category- 
+5sroot, 5srootinv1, 5-2, 5-3inv2, etc 
+4) chords to add: if chords in a key, add to key, else add to special chords
+    1) 6/9 chords- difference between 6/9 and add 6/9 
+    2) aug chords 
+        { type: 'aug', notes: [ 'x', 9, 8, 7, 7, 'x' ] }  NOT FOUND
+        { type: 'aug', notes: [ 'x', 13, 12, 11, 11, 'x' ] }  NOT FOUND
+        { type: 'aug', notes: [ 10, 'x', 12, 11, 11, 10 ] }  NOT FOUND
+        { type: 'aug', notes: [ 'x', 5, 4, 3, 3, 'x' ] }  NOT FOUND
+        { type: 'aug', notes: [ 10, 9, 8, 7, 'x', 'x' ] }  NOT FOUND
+    3) 5th chords- 5, 5sus2, 5sus4, 5add9, 5add6, 5add6/9
+    4) 7th chords with 3,5,7 voicing?- multiple instances  
+    -notes in Dm7- D,F,A,C
+    -this chord is A,C,F- so includes 3,5,7
+    5) 4th inversion with dropped 1 
+    -E A C F (9,5,7,3)
+    -notes in m9- D F A C E 
+    -conclusion: 4th inversion and 1 dropped but not 5 
+    6) 9th chords with dropped 1?
+    -C,F#,A,E 
+    Notes in the chord: D - F# - A - C - E
+    7,3,5,9
+    conclusion: 3rd inversion and dropped 1 
+    7)m9 with all notes - 1,3,5,7,9- we dont have this voicing
+    8){ type: 'minmaj7', notes: [ 'x', 5, 7, 6, 6, 5 ] }  NOT FOUND
+    minmaj7- 1, b3, 5, 7- in harmonic minor Scale
+    9) dominant7b5 - 1,3,b5,b7- doesnt exist in a key 
+    10  { type: 'dom7#5', notes: [ 'x', 5, 8, 5, 7, 6 ] }  NOT FOUND
+        { type: 'dom7#5', notes: [ 10, 9, 10, 11, 11, 'x' ] }  NOT FOUND
+        -D,A#,C,F#,A#- 1, #5, b7, 3
+        -augmented 7th chord or dom7#5- not in a key 
+    11) { type: 'dom7b9', notes: [ 10, 'x', 10, 11, 10, 11 ] }  NOT FOUND
+    1,3,5,b7,b9- alteration of dominant 9th chord- by dropping the Major 9 by one semitone 
+    -does not appear to be in a key 
+    12) 2) { type: '9', notes: [ 10, 12, 10, 11, 10, 12 ] }  NOT FOUND
+    D,A,C,F#,E- we dont have this voicing- add more voicings
+    12) { type: 'dom7#9', notes: [ 'x', 'x', 12, 11, 13, 13 ] }  NOT FOUND
+    { type: 'dom7#9', notes: [ 'x', 5, 4, 5, 6, 'x' ] }  NOT FOUND
+    -Hendrix chord, used as turnaround- not in key, but used in place of dominant chord
+    13) { type: 'dim', notes: [ 10, 'x', 9, 10, 9, 10 ] }  NOT FOUND
+    -D,cb, f,Ab,D
+    -notes in dim chord - D,F,Ab 
+    -1,7bb,b3, b5, 1 
+    - so this a fully diminished 7th as opposed to halfdim- harmonic minor 
+    13) { type: 'M7#11', notes: [ 'x', 'x', 6, 7, 7, 9 ] }  NOT FOUND
+    { type: 'M7#11', notes: [ 4, 5, 4, 6, 'x', 'x' ] }  NOT FOUND
+    -G#,D,F#,C# 
+    #11, 1, 3, 7
+    - on scale degree 4: {notes: [1,3,5,7,9,"#11"],name: "M9#11", htmlName: null
+        ,voicings: [[1,3,7,"#11"],[3,7,"#11"]]},
+    -contains voicing, but not this inversion 
+    14) dom7b5- 1,3,b5,b7- doesnt naturally exist in a scale- altered chord
+    -used as an altered Dominant 7th chord
+    { type: 'dom7b5', notes: [ 'x', 'x', 6, 7, 7, 8 ] }  NOT FOUND
+    { type: 'dom7b5', notes: [ 'x', 11, 12, 11, 13, 'x' ] }  NOT FOUND
+    { type: 'dom7b5', notes: [ 4, 5, 4, 5, 'x', 'x' ] }  NOT FOUND
+    { type: 'dom7b5', notes: [ 'x', 'x', 'o', 1, 1, 2 ] }  NOT FOUND
+    { type: 'dom7b5', notes: [ 'x', 5, 6, 5, 7, 'x' ] }  NOT FOUND
+    { type: 'dom7b5', notes: [ 10, 11, 10, 11, 'x', 'x' ] }  NOT FOUND
+    { type: 'dom7b5', notes: [ 'x', 'x', 10, 11, 9, 10 ] }  NOT FOUND
+    { type: 'dom7b5', notes: [ 'x', 3, 4, 1, 3, 'x' ] }  NOT FOUND
+    { type: 'dom7b5', notes: [ 'x', 'x', 4, 5, 3, 4 ] }  NOT FOUND
+    { type: 'dom7b5', notes: [ 'x', 9, 10, 7, 9, 'x' ] }  NOT FOUND
+    { type: 'dom7b5', notes: [ 2, 3, 'o', 1, 'x', 'x' ] }  NOT FOUND
+
+info on different dim chords: 
+***
+-dimished 7 chord - Scale intervals: 1 - b3 - b5 - bb7
+Notes in the chord: D - F - Ab - B
+**harmonic minor scale
+
+dim - Scale intervals: 1 - b3 - b5
+notes in the chord: D - F - Ab
+
+halfdim(m7b5)
+scale intervals: 1 - b3 - b5 - b7
+notes in the chord: D - F - Ab - C
+***
+
+*****D major scale - D, E, F#, G, A, B, C# 
+
+5) Change add2 to add9? 
+    3  matches found for  [ 10, 'x', 'x', 11, 10, 12 ] name:  add9
+    1) : name: Dadd2 10,x,x,11,10,12
+    2) : name: Dadd2 10,x,x,11,10,12
+    3) : name: Dadd2 10,x,x,11,10,12
+
+6) { type: '#11', notes: [ 'x', 5, 6, 6, 7, 5 ] }  NOT FOUND
+-x,D,G#,C#,F#,A
+x,1,#11 ,7,3,5
+D major scale D, E, F#, G, A, B, and C#
+-conclusion: sharp11 is in key- on 4th scale degree M9#11 
+-we dont have voicing for this- closest voicing 1,3,7,#11
+-conclusion-add more voicings for extended chords- cast a larger net 
+
+7) 2  matches found for  [ 'x', 'x', 11, 11, 9, 10 ] name:  M7#11
+1) : name: DM9#11 x,x,11,11,9,10
+-conclusion: same as M9#11- yes  
+C#, F#, G#, D 
+7, 3, #11, 1- so could this be both M7#11 and M9#11 without the 9- does voicing for M9#11 
+need to include the 9? 
+-brings up a good point- we need to be careful with how we name chords that 
+have voicings that drop notes
+-other examples of this: 
+9) same as 8
+1) : name: DM9#11 x,x,o,1,2,2
+2) : name: DM9#11 x,x,o,1,2,2
+2  matches found for  [ 'x', 5, 6, 6, 7, 'x' ] name:  M7#11
+1) : name: DM9#11 x,5,6,6,7,x
+2) : name: DM9#11 x,5,6,6,7,x
+2  matches found for  [ 10, 11, 11, 11, 'x', 'x' ] name:  M7#11
+1) : name: DM9#11 10,11,11,11,x,x
+2) : name: DM9#11 10,11,11,11,x,x
+
+8) alter testSearch so that it shows only 
+chordNotFound || (names of chords found dont match name of input)
+-eg input name : 5add9, but no names of the found chords === "5add9" 
+
+
+
+////////////////////////////////////////////////////////////////////
+/////////// ACTION PLAN: //////////////////////////////////////////
+//////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////
+1) add third and fourth inversions 
+2)additional voicings 
+3)add chords that exist in keys 
+4)add special and altered chords 
+5)harmonic minor- "special keys" 
+6)README for Logic folder
+7) remove duplicates 
+8)Look into naming conventions of extended chord voicings 
+9)alter search algotithm (add new algorithm? ) for only chord not found 
+or names dont match
+10) git repo 
+11) retest after addition of new chords 
+12) retes with new root from Guitar chord encyclopedia

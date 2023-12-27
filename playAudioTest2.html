@@ -1,0 +1,387 @@
+<html>
+    <head>
+        <!-- test this only in safari, chrome gives errors-->
+    </head>
+    <body>
+        <audio id = "6thString" src = "guitarAudioFiles/6thString.mp3"></audio>
+        <audio id = "5thString" src = "guitarAudioFiles/5thString.mp3"></audio>
+        <audio id = "4thString" src = "guitarAudioFiles/4thString.mp3"></audio>
+        <audio id = "3rdString" src = "guitarAudioFiles/3rdString.mp3"></audio>
+        <audio id = "2ndString" src = "guitarAudioFiles/2ndString.mp3"></audio>
+        <audio id = "1stString" src = "guitarAudioFiles/1stString.mp3"></audio>
+        
+        <button id = "btn">play</button>
+        <button id = "btn2">play</button>
+        <button id = "btn3">play</button>
+        <button id = "btn4">play</button>
+    </body>
+
+    <script>
+        const chord = ['x', 3, 2, 'o', 'o', 3 ]; 
+        let btn = document.getElementById("btn"); 
+        btn.addEventListener("click", ()=> {
+            //console.log("button clicked");
+            btn.disabled = true; 
+            let audioElements = document.querySelectorAll("audio");  
+            audioElements.forEach(audioElement => {
+                let id = audioElement.id; 
+                let fret = null; 
+                let currentTime = 0;
+                let play = true; 
+                
+                switch(id){
+                    case "6thString":
+                        fret = chord[0];
+                        if(fret === "o"){
+                            audioElement.currentTime = 0; 
+                        } else if (fret === "x"){
+                            play = false; 
+                        } else {
+                            audioElement.currentTime = 2.0 * fret; 
+                        }
+                        break;
+                    case "5thString": 
+                        fret = chord[1];
+                        if(fret === "o"){
+                            audioElement.currentTime = 0; 
+                        } else if (fret === "x"){
+                            play = false; 
+                        } else {
+                            audioElement.currentTime = 2.0 * fret; 
+                        }
+                        break;
+                    case "4thString":
+                        fret = chord[2];
+                        if(fret === "o"){
+                            audioElement.currentTime = 0; 
+                        } else if (fret === "x"){
+                            play = false; 
+                        } else {
+                            audioElement.currentTime = 2.0 * fret; 
+                        }
+                        break;
+                    case "3rdString":
+                        fret = chord[3];
+                        if(fret === "o"){
+                            audioElement.currentTime = 0; 
+                        } else if (fret === "x"){
+                            play = false; 
+                        } else {
+                            audioElement.currentTime = 2.0 * fret; 
+                        }
+                        break;
+                    case "2ndString":
+                        fret = chord[4];
+                        if(fret === "o"){
+                            audioElement.currentTime = 0; 
+                        } else if (fret === "x"){
+                            play = false; 
+                        } else {
+                            audioElement.currentTime = 2.0 * fret; 
+                        }
+                        break;
+                    case "1stString":
+                        fret = chord[5];
+                        if(fret === "o"){
+                            audioElement.currentTime = 0; 
+                        } else if (fret === "x"){
+                            play = false; 
+                        } else {
+                            audioElement.currentTime = 2.0 * fret; 
+                        }
+                    default:
+
+                }
+                if(play){
+                    audioElement.play(); 
+                }
+                
+                
+               
+
+            });
+            setTimeout(()=> {
+                audioElements.forEach(audioElement=> {
+                    audioElement.pause(); 
+                    audioElement.currentTime = 0; 
+                    btn.disabled = false; 
+                });
+            },1700);
+        });
+
+        const chord2 = ['x',5,7,7,7,5]; 
+        let btn2 = document.getElementById("btn2"); 
+        btn2.addEventListener("click", ()=> {
+            //console.log("button clicked");
+            btn2.disabled = true; 
+            let audioElements = document.querySelectorAll("audio");  
+            audioElements.forEach(audioElement => {
+                let id = audioElement.id; 
+                let fret = null; 
+                let currentTime = 0;
+                let play = true; 
+                
+                switch(id){
+                    case "6thString":
+                        fret = chord2[0];
+                        if(fret === "o"){
+                            audioElement.currentTime = 0; 
+                        } else if (fret === "x"){
+                            play = false; 
+                        } else {
+                            audioElement.currentTime = 2.0 * fret; 
+                        }
+                        break;
+                    case "5thString": 
+                        fret = chord2[1];
+                        if(fret === "o"){
+                            audioElement.currentTime = 0; 
+                        } else if (fret === "x"){
+                            play = false; 
+                        } else {
+                            audioElement.currentTime = 2.0 * fret; 
+                        }
+                        break;
+                    case "4thString":
+                        fret = chord2[2];
+                        if(fret === "o"){
+                            audioElement.currentTime = 0; 
+                        } else if (fret === "x"){
+                            play = false; 
+                        } else {
+                            audioElement.currentTime = 2.0 * fret; 
+                        }
+                        break;
+                    case "3rdString":
+                        fret = chord2[3];
+                        if(fret === "o"){
+                            audioElement.currentTime = 0; 
+                        } else if (fret === "x"){
+                            play = false; 
+                        } else {
+                            audioElement.currentTime = 2.0 * fret; 
+                        }
+                        break;
+                    case "2ndString":
+                        fret = chord2[4];
+                        if(fret === "o"){
+                            audioElement.currentTime = 0; 
+                        } else if (fret === "x"){
+                            play = false; 
+                        } else {
+                            audioElement.currentTime = 2.0 * fret; 
+                        }
+                        break;
+                    case "1stString":
+                        fret = chord2[5];
+                        if(fret === "o"){
+                            audioElement.currentTime = 0; 
+                        } else if (fret === "x"){
+                            play = false; 
+                        } else {
+                            audioElement.currentTime = 2.0 * fret; 
+                        }
+                    default:
+
+                }
+                if(play){
+                    audioElement.play(); 
+                } 
+                
+               
+
+            });
+            setTimeout(()=> {
+                audioElements.forEach(audioElement=> {
+                    audioElement.pause(); 
+                    audioElement.currentTime = 0; 
+                    btn2.disabled = false; 
+                });
+            },1700);
+        });
+        const chord3 = [3, "x", 5,7,8,7 ]; 
+        let btn3 = document.getElementById("btn3"); 
+        btn3.addEventListener("click", ()=> {
+            //console.log("button clicked");
+            btn3.disabled = true; 
+            let audioElements = document.querySelectorAll("audio");  
+            audioElements.forEach(audioElement => {
+                let id = audioElement.id; 
+                let fret = null; 
+                let currentTime = 0;
+                let play = true; 
+                
+                switch(id){
+                    case "6thString":
+                        fret = chord3[0];
+                        if(fret === "o"){
+                            audioElement.currentTime = 0; 
+                        } else if (fret === "x"){
+                            play = false; 
+                        } else {
+                            audioElement.currentTime = 2.0 * fret; 
+                        }
+                        break;
+                    case "5thString": 
+                        fret = chord3[1];
+                        if(fret === "o"){
+                            audioElement.currentTime = 0; 
+                        } else if (fret === "x"){
+                            play = false; 
+                        } else {
+                            audioElement.currentTime = 2.0 * fret; 
+                        }
+                        break;
+                    case "4thString":
+                        fret = chord3[2];
+                        if(fret === "o"){
+                            audioElement.currentTime = 0; 
+                        } else if (fret === "x"){
+                            play = false; 
+                        } else {
+                            audioElement.currentTime = 2.0 * fret; 
+                        }
+                        break;
+                    case "3rdString":
+                        fret = chord3[3];
+                        if(fret === "o"){
+                            audioElement.currentTime = 0; 
+                        } else if (fret === "x"){
+                            play = false; 
+                        } else {
+                            audioElement.currentTime = 2.0 * fret; 
+                        }
+                        break;
+                    case "2ndString":
+                        fret = chord3[4];
+                        if(fret === "o"){
+                            audioElement.currentTime = 0; 
+                        } else if (fret === "x"){
+                            play = false; 
+                        } else {
+                            audioElement.currentTime = 2.0 * fret; 
+                        }
+                        break;
+                    case "1stString":
+                        fret = chord3[5];
+                        if(fret === "o"){
+                            audioElement.currentTime = 0; 
+                        } else if (fret === "x"){
+                            play = false; 
+                        } else {
+                            audioElement.currentTime = 2.0 * fret; 
+                        }
+                    default:
+
+                }
+                if(play){
+
+                }
+                if(play){
+                    audioElement.play(); 
+                }
+                
+               
+
+            });
+            setTimeout(()=> {
+                audioElements.forEach(audioElement=> {
+                    audioElement.pause(); 
+                    audioElement.currentTime = 0; 
+                    btn3.disabled = false; 
+                });
+            },1700);
+        });
+
+        const chord4 = ["o",2,2,"o","o",3]; 
+        let btn4 = document.getElementById("btn4"); 
+        btn4.addEventListener("click", ()=> {
+            //console.log("button clicked");
+            btn4.disabled = true; 
+            let audioElements = document.querySelectorAll("audio");  
+            audioElements.forEach(audioElement => {
+                let id = audioElement.id; 
+                let fret = null; 
+                let currentTime = 0;
+                let play = true; 
+                
+                switch(id){
+                    case "6thString":
+                        fret = chord4[0];
+                        if(fret === "o"){
+                            audioElement.currentTime = 0; 
+                        } else if (fret === "x"){
+                            play = false; 
+                        } else {
+                            audioElement.currentTime = 2.0 * fret; 
+                        }
+                        break;
+                    case "5thString": 
+                        fret = chord4[1];
+                        if(fret === "o"){
+                            audioElement.currentTime = 0; 
+                        } else if (fret === "x"){
+                            play = false; 
+                        } else {
+                            audioElement.currentTime = 2.0 * fret; 
+                        }
+                        break;
+                    case "4thString":
+                        fret = chord4[2];
+                        if(fret === "o"){
+                            audioElement.currentTime = 0; 
+                        } else if (fret === "x"){
+                            play = false; 
+                        } else {
+                            audioElement.currentTime = 2.0 * fret; 
+                        }
+                        break;
+                    case "3rdString":
+                        fret = chord4[3];
+                        if(fret === "o"){
+                            audioElement.currentTime = 0; 
+                        } else if (fret === "x"){
+                            play = false; 
+                        } else {
+                            audioElement.currentTime = 2.0 * fret; 
+                        }
+                        break;
+                    case "2ndString":
+                        fret = chord4[4];
+                        if(fret === "o"){
+                            audioElement.currentTime = 0; 
+                        } else if (fret === "x"){
+                            play = false; 
+                        } else {
+                            audioElement.currentTime = 2.0 * fret; 
+                        }
+                        break;
+                    case "1stString":
+                        fret = chord4[5];
+                        if(fret === "o"){
+                            audioElement.currentTime = 0; 
+                        } else if (fret === "x"){
+                            play = false; 
+                        } else {
+                            audioElement.currentTime = 2.0 * fret; 
+                        }
+                    default:
+
+                }
+                if(play){
+                    audioElement.play(); 
+                } 
+                
+               
+
+            });
+            setTimeout(()=> {
+                audioElements.forEach(audioElement=> {
+                    audioElement.pause(); 
+                    audioElement.currentTime = 0; 
+                    btn4.disabled = false; 
+                });
+            },1700);
+        });
+    </script>
+</html>
