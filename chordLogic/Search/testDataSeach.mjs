@@ -48,49 +48,163 @@ const midiNotesToNotes = {
 }
 
 
-
-function searchWithTestData(allChords){
+//option: 1- displays all matches found for each input and displays 
+//input info and and NOT FOUND if not found 
+//option 2 - only shows : 
+// no chords found || !(chordInputName == chordFoundName)
+function searchWithTestData(allChords, option){
   //console.log("test data : " , rootD);
   
-  testingData.forEach( category => {
-    console.log("/////////////////////////////////////////");
-    console.log('root: ', category["rootname"] , ', midi root: ' , category["root"]);
-    console.log("Category: ", category["category"]); 
-    category["chords"].forEach(chordObj => {
-      let searchArray = chordObj["notes"]; 
-      let matchingChords = []; 
-      allChords.forEach(chord => {
-        if(
-          chord["chord"][0] === searchArray[0] 
-          && chord["chord"][1] === searchArray[1]
-          && chord["chord"][2] === searchArray[2]
-          && chord["chord"][3] === searchArray[3]
-          && chord["chord"][4] === searchArray[4]
-          && chord["chord"][5] === searchArray[5]
-        )
-        {
-          matchingChords.push(chord); 
-        }
-      });
-      if(matchingChords.length == 0){
-        console.log(chordObj, " NOT FOUND"); 
-      } else{
-        console.log( matchingChords.length , " matches found for ", searchArray, "name: ", chordObj["type"]); 
-        matchingChords.forEach((chord,i)=> {
-          console.log((i+1) + ") : " + 'name: '+ midiNotesToNotes[chord["chordRoot"]] + chord["chordName"] + " " + chord["chord"]); 
+  if (option == 1){
+    testingData.forEach( category => {
+      console.log("/////////////////////////////////////////");
+      console.log('root: ', category["rootname"] , ', midi root: ' , category["root"]);
+      console.log("Category: ", category["category"]); 
+      category["chords"].forEach(chordObj => {
+        let searchArray = chordObj["notes"]; 
+        let matchingChords = []; 
+        allChords.forEach(chord => {
+          if(
+            chord["chord"][0] === searchArray[0] 
+            && chord["chord"][1] === searchArray[1]
+            && chord["chord"][2] === searchArray[2]
+            && chord["chord"][3] === searchArray[3]
+            && chord["chord"][4] === searchArray[4]
+            && chord["chord"][5] === searchArray[5]
+          )
+          {
+            matchingChords.push(chord); 
+          }
         });
-      }
-    });  
-  }); 
+        if(matchingChords.length == 0){
+          console.log(chordObj, " NOT FOUND"); 
+        } else{
+          console.log( matchingChords.length , " matches found for ", searchArray, "name: ", chordObj["type"]); 
+          matchingChords.forEach((chord,i)=> {
+            console.log((i+1) + ") : " + 'name: '+ midiNotesToNotes[chord["chordRoot"]] + chord["chordName"] + " " + chord["chord"]); 
+          });
+        }
+      });  
+    }); 
+  } else if (option == 2){
+    //log if no chords found || !(chordInputName == chordFoundName) 
+    testingData.forEach( category => {
+      console.log("/////////////////////////////////////////");
+      console.log('root: ', category["rootname"] , ', midi root: ' , category["root"]);
+      console.log("Category: ", category["category"]); 
+      category["chords"].forEach(chordObj => {
+        let searchArray = chordObj["notes"]; 
+        let matchingChords = []; 
+        allChords.forEach(chord => {
+          if(
+            chord["chord"][0] === searchArray[0] 
+            && chord["chord"][1] === searchArray[1]
+            && chord["chord"][2] === searchArray[2]
+            && chord["chord"][3] === searchArray[3]
+            && chord["chord"][4] === searchArray[4]
+            && chord["chord"][5] === searchArray[5]
+          )
+          {
+            matchingChords.push(chord); 
+          }
+        });
+        
+          //console.log( matchingChords.length , " matches found for ", searchArray, "name: ", chordObj["type"]); 
+         
+            /*
+            console.log((i+1) + ") : " + 'name: '+ midiNotesToNotes[chord["chordRoot"]] + chord["chordName"] + " " + chord["chord"]); 
+            */ 
+
+          ///////////////
+          //Test data 
+           //test data -> chordObj is { type: "m", notes: [10,'x','x',...]}
+           //test data -> category is 
+           // {root: 62, rootname: "D", category : "Big Minor", chords: []}
+           //chords from above is : 
+           // [ {type: "m", notes: ["x", "x", "o", 2, 3]}, {........}  ]
+           //////////////
+
+           //////////////
+           //file.json 
+           //a long array with object for each possible chord voicing 
+           // [
+           //  {"chord" ["x", "x", "x", 5,5,3 ], "chordName: "M", "chordRoot" : 48}, 
+           // { .......}, 
+           // { .......} 
+           //]
+           // matchingChords will contain an array of the chord objects in which the 
+           // fret numbers match (similar structure to file.json, but shorter): 
+           //  [
+            //  {"chord" ["x", "x", "x", 5,5,3 ], "chordName: "M", "chordRoot" : 48}, 
+            // { .......}, 
+            // { .......} 
+            // ]
+            ///////////////
+
+            //We need to log the following: 
+            // no chords found || !(chordInputName == chordFoundName)
+
+          //determine if there is an exact match in matchingChords 
+          let exactMatch = false; 
+          if (matchingChords.length > 0){
+            matchingChords.forEach( chordMatch => {
+              if((chordMatch["chordName"] === chordObj["type"]) 
+              &&(chordMatch["chordRoot"] === category["root"])){
+                exactMatch = true; 
+              }
+            }); 
+          }
+
+          //find imperfect matches- same frets but different names 
+          let imperfectMatches = []; 
+          if(!exactMatch && matchingChords.length > 0){
+            matchingChords.forEach( matchingChord => {
+              imperfectMatches.push( "" + matchingChord["chordRoot"] + " " + matchingChord["chordName"]); 
+            }); 
+          }
+
+          //remove duplicates from imperfect matches
+          let matchesNoDups = []; 
+          imperfectMatches.forEach(match => {
+            if(!(matchesNoDups.includes(match))){
+              matchesNoDups.push(match); 
+            }
+          }); 
+
+
+          if(exactMatch) {
+            console.log("--->" +  category["root"] + " " + chordObj["type"] + " FOUND" );
+          } else {
+            if(matchingChords.length === 0){
+              console.log("XXXX NO CHORDS FOUND : ", category["root"] + " " + chordObj["type"] + " ",  chordObj["notes"] ); 
+            } else {
+              console.log("XXXX NO EXACT MATCHES FOUND : ", category["root"] + " " + chordObj["type"] + " " , chordObj["notes"] ); 
+              console.log("     others found: ",  matchesNoDups); 
+            }
+          }
+
+
+      });  
+    });
+  } else {
+    console.log("Invalid option"); 
+  }
 }
 
 
-fs.readFile("../file.json", "utf8", (err, jsonString) => {
+//search for the test data and log only the following: 
+// no chords found || !(chordInputName == chordFoundName)
+function testSearchOnlyNotFound(){
+
+}
+
+
+fs.readFile("../Logic/file.json", "utf8", (err, jsonString) => {
     if (err) {
       console.log("File read failed:", err);
       return;
     }
     chordData = JSON.parse(jsonString);
-    searchWithTestData(chordData);
+    searchWithTestData(chordData,2);
 });
 
