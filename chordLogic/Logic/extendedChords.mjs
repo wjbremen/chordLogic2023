@@ -119,14 +119,12 @@ chords: {
 ////////////////////////////////////////
 
 const chordsExtended = {
-    //7th chords wont include full voicings, 
-    //ie 1,3,5,7- these are already included 
-    //in allMajorKeys
+    
     1: [
         {notes: [1,3,5,7],name: "M7", htmlName: null,
-        voicings: [[1,3,7],[3,7]]},
+        voicings: [[1,3,5,7],[3,7],[1,3,7],[3,5,7]]},
         {notes: [1,3,5,7,9],name: "M9", htmlName: null
-        ,voicings: [[1,3,7,9],[3,7,9]]},
+        ,voicings: [[1,3,5,7,9], [3,7,9], [3,5,7,9], [1,3,7,9]]},
         {notes: [1,3,5,7,9,11],name: "M11", htmlName: null
         ,voicings: [[1,3,7,11],[3,7,11]]},
         {notes: [1,3,5,7,9,11,13],name: "M13", htmlName: null
@@ -135,9 +133,9 @@ const chordsExtended = {
     ],
     2: [
         {notes: [1,"b3",5,"b7"],name: "m7", htmlName: null
-        ,voicings: [[1,"b3","b7"],["b3","b7"]]},
+        ,voicings: [[1,"b3",5,"b7"], ["b3","b7"], [1,"b3","b7"], ["b3",5,"b7"]]},
         {notes: [1,"b3",5,"b7",9],name: "m9", htmlName: null
-        ,voicings: [[1,"b3","b7",9],["b3","b7",9]]},
+        ,voicings: [[1,"b3",5,"b7",9], ["b3","b7",9], ["b3",5,"b7",9], [1,"b3","b7",9]]},
         {notes: [1,"b3",5,"b7",9,11],name: "m11", htmlName: null
         ,voicings: [[1,"b3","b7",11],["b3","b7",11]]},
         {notes: [1,"b3",5,"b7",9,11,13],name: "m13", htmlName: null
@@ -145,9 +143,9 @@ const chordsExtended = {
     ],
     3: [
         {notes: [1,"b3",5,"b7"],name: "m7", htmlName: null
-        ,voicings: [[1,"b3","b7"],["b3","b7"]]},
+        ,voicings: [[1,"b3",5,"b7"], ["b3","b7"], [1,"b3","b7"], ["b3",5,"b7"]]},
         {notes: [1,"b3",5,"b7","b9"],name: "m7b9", htmlName: null
-        ,voicings: [[1,"b3","b7","b9"],["b3","b7","b9"]]},
+        ,voicings: [[1,"b3",5,"b7","b9"], ["b3","b7","b9"], ["b3",5,"b7","b9"], [1,"b3","b7","b9"]]},
         {notes: [1,"b3",5,"b7","b9",11],name: "m11b9", htmlName: null
         ,voicings: [[1,"b3","b7",11],["b3","b7",11]]},
         {notes: [1,"b3",5,"b7","b9",11,"b13"],name: "m11b9b13", htmlName: null
@@ -155,9 +153,9 @@ const chordsExtended = {
     ],
     4: [
         {notes: [1,3,5,7],name: "M7", htmlName: null
-        ,voicings: [[1,3,7],[3,7]]},
+        ,voicings: [[1,3,5,7],[3,7],[1,3,7],[3,5,7]]},
         {notes: [1,3,5,7,9],name: "M9", htmlName: null,
-        voicings: [[1,3,7,9],[3,7,9]]},
+        voicings: [[1,3,5,7,9], [3,7,9], [3,5,7,9], [1,3,7,9]]},
         {notes: [1,3,5,7,9,"#11"],name: "M9#11", htmlName: null
         ,voicings: [[1,3,7,"#11"],[3,7,"#11"]]},
         {notes: [1,3,5,7,9,"#11",13],name: "M13#11", htmlName: null
@@ -165,9 +163,9 @@ const chordsExtended = {
     ],
     5: [
         {notes: [1,3,5,"b7"],name: "7", htmlName: null
-        ,voicings: [[1,3,"b7"],[3,"b7"]]},
+        ,voicings: [[1,3,5,"b7"], [3,"b7"], [1,3,"b7"], [3,5,"b7"]]},
         {notes: [1,3,5,"b7",9],name: "9", htmlName: null
-        ,voicings: [[1,3,"b7",9],[3,"b7",9]]},
+        ,voicings: [[1,3,5,"b7",9], [3,"b7",9], [3,5,"b7",9], [1,3,"b7",9]]},
         {notes: [1,3,5,"b7",9,11],name: "11", htmlName: null
         ,voicings: [[1,3,"b7",11],[3,"b7",11]]},
         {notes: [1,3,5,"b7",9,11,13],name: "13", htmlName: null
@@ -175,9 +173,9 @@ const chordsExtended = {
     ],
     6: [
         {notes: [1,"b3",5,"b7"],name: "m7", htmlName: null
-        ,voicings: [[1,"b3","b7"],["b3","b7"]]},
+        ,voicings: [[1,"b3",5,"b7"], ["b3","b7"], [1,"b3","b7"], ["b3",5,"b7"]]},
         {notes: [1,"b3",5,"b7",9],name: "m9", htmlName: null
-        ,voicings: [[1,"b3","b7",9],["b3","b7",9]]},
+        ,voicings: [[1,"b3",5,"b7",9], ["b3","b7",9], ["b3",5,"b7",9], [1,"b3","b7",9]]},
         {notes: [1,"b3",5,"b7",9,11],name: "m11", htmlName: null
         ,voicings: [[1,"b3","b7",11],["b3","b7",11]]},
         {notes: [1,"b3",5,"b7",9,11,"b13"],name: "m11b13", htmlName: null
@@ -1104,6 +1102,7 @@ function fourthStringRootExt(notesArray){
 
 
 
+
 function thirdStringRootExt(notesArray){
     
     //console.dir(JSON.stringify(getFretboardNotesObject())); 
@@ -1259,23 +1258,103 @@ function inversionExt(notesArray, startingString, inversionType){
     //get inversion of notesArray
     /////////////////////////////
     let invertedNotesArray =[]; 
-    if(inversionType === "first"){
-        let indexZero = notesArray[0]; 
-        notesArray.forEach((note,i)=> {
-            if(!(i === 0)){
-                invertedNotesArray.push(note); 
+    if(notesArray.length >=2 && notesArray.length <=6){
+        
+        let length = notesArray.length; 
+        if(inversionType === "first"){
+            let indexZero = notesArray[0]; 
+            notesArray.forEach((note,i)=> {
+                if(!(i === 0)){
+                    invertedNotesArray.push(note); 
+                }
+            }); 
+            invertedNotesArray.push(indexZero); 
+        } else if (inversionType === "second"){
+            notesArray.forEach((note,i)=> {
+                if(!(i === 0 || i === 1)){
+                    invertedNotesArray.push(note); 
+                }
+            }); 
+            invertedNotesArray.push(notesArray[0]);
+            invertedNotesArray.push(notesArray[1]); 
+        } else if(inversionType === "third"){
+            switch(length){
+                case 2: 
+                    //switch them
+                    invertedNotesArray.push(notesArray[1]); 
+                    invertedNotesArray.push(notesArray[0]); 
+                    break; 
+                case 3:
+                    //same as original 
+                    invertedNotesArray = notesArray;  
+                    break;
+                case 4: 
+                    //same as first inversion 
+                    invertedNotesArray.push(notesArray[3]); 
+                    invertedNotesArray.push(notesArray[0]);
+                    invertedNotesArray.push(notesArray[1]);
+                    invertedNotesArray.push(notesArray[2]);
+                    break; 
+                case 5: 
+                    invertedNotesArray.push(notesArray[3]); 
+                    invertedNotesArray.push(notesArray[4]);
+                    invertedNotesArray.push(notesArray[0]);
+                    invertedNotesArray.push(notesArray[1]);
+                    invertedNotesArray.push(notesArray[2]);
+                    break; 
+                case 6: 
+                    invertedNotesArray.push(notesArray[3]);
+                    invertedNotesArray.push(notesArray[4]);
+                    invertedNotesArray.push(notesArray[5]);
+                    invertedNotesArray.push(notesArray[0]);
+                    invertedNotesArray.push(notesArray[1]);
+                    invertedNotesArray.push(notesArray[2]);
+                    break; 
+                default: 
+                    break; 
             }
-        }); 
-        invertedNotesArray.push(indexZero); 
-    } else if (inversionType === "second"){
-        notesArray.forEach((note,i)=> {
-            if(!(i === 0 || i === 1)){
-                invertedNotesArray.push(note); 
+
+        } else if(inversionType === "fourth"){
+            switch(length){
+                case 2:
+                    //same as original 
+                    invertedNotesArray.push(notesArray[0]); 
+                    invertedNotesArray.push(notesArray[1]);
+                    break; 
+                case 3: 
+                    //same as first inversion 
+                    invertedNotesArray.push(notesArray[1]); 
+                    invertedNotesArray.push(notesArray[2]);
+                    invertedNotesArray.push(notesArray[0]);
+                    break;
+                case 4: 
+                    //same as original 
+                    invertedNotesArray = notesArray; 
+                    break; 
+                case 5:  
+                    invertedNotesArray.push(notesArray[4]);
+                    invertedNotesArray.push(notesArray[0]);
+                    invertedNotesArray.push(notesArray[1]);
+                    invertedNotesArray.push(notesArray[2]);
+                    invertedNotesArray.push(notesArray[3]);
+                    break; 
+                case 6: 
+                    invertedNotesArray.push(notesArray[4]);
+                    invertedNotesArray.push(notesArray[5]);
+                    invertedNotesArray.push(notesArray[0]);
+                    invertedNotesArray.push(notesArray[1]);
+                    invertedNotesArray.push(notesArray[2]);
+                    invertedNotesArray.push(notesArray[3]);
+                    break; 
+                default: 
+                    break; 
             }
-        }); 
-        invertedNotesArray.push(notesArray[0]);
-        invertedNotesArray.push(notesArray[1]); 
+        } else {
+            return ("error"); 
+        }
+        
     }
+    
     /////////////////////////////////////////
 
     if(startingString === 6){
@@ -1292,7 +1371,7 @@ function inversionExt(notesArray, startingString, inversionType){
 
 }
 
-
+console.log(arrayOfChordArraysToFrets(inversionExt([62,65,68,72], 4, "third"))); 
 
 ////////////////////////////////////////////////
 //// get consecutive note chords starting on 
@@ -1503,22 +1582,101 @@ function inversionsOfConsecutiveNoteChordsExt(startingString, endingString,notes
     //get inversion of notesArray
     /////////////////////////////
     let invertedNotesArray =[]; 
-    if(inversionType === "first"){
-        let indexZero = notesArray[0]; 
-        notesArray.forEach((note,i)=> {
-            if(!(i === 0)){
-                invertedNotesArray.push(note); 
+    if(notesArray.length >=2 && notesArray.length <=6){
+        
+        let length = notesArray.length; 
+        if(inversionType === "first"){
+            let indexZero = notesArray[0]; 
+            notesArray.forEach((note,i)=> {
+                if(!(i === 0)){
+                    invertedNotesArray.push(note); 
+                }
+            }); 
+            invertedNotesArray.push(indexZero); 
+        } else if (inversionType === "second"){
+            notesArray.forEach((note,i)=> {
+                if(!(i === 0 || i === 1)){
+                    invertedNotesArray.push(note); 
+                }
+            }); 
+            invertedNotesArray.push(notesArray[0]);
+            invertedNotesArray.push(notesArray[1]); 
+        } else if(inversionType === "third"){
+            switch(length){
+                case 2: 
+                    //switch them
+                    invertedNotesArray.push(notesArray[1]); 
+                    invertedNotesArray.push(notesArray[0]); 
+                    break; 
+                case 3:
+                    //same as original 
+                    invertedNotesArray = notesArray;  
+                    break;
+                case 4: 
+                    //same as first inversion 
+                    invertedNotesArray.push(notesArray[3]); 
+                    invertedNotesArray.push(notesArray[0]);
+                    invertedNotesArray.push(notesArray[1]);
+                    invertedNotesArray.push(notesArray[2]);
+                    break; 
+                case 5: 
+                    invertedNotesArray.push(notesArray[3]); 
+                    invertedNotesArray.push(notesArray[4]);
+                    invertedNotesArray.push(notesArray[0]);
+                    invertedNotesArray.push(notesArray[1]);
+                    invertedNotesArray.push(notesArray[2]);
+                    break; 
+                case 6: 
+                    invertedNotesArray.push(notesArray[3]);
+                    invertedNotesArray.push(notesArray[4]);
+                    invertedNotesArray.push(notesArray[5]);
+                    invertedNotesArray.push(notesArray[0]);
+                    invertedNotesArray.push(notesArray[1]);
+                    invertedNotesArray.push(notesArray[2]);
+                    break; 
+                default: 
+                    break; 
             }
-        }); 
-        invertedNotesArray.push(indexZero); 
-    } else if (inversionType === "second"){
-        notesArray.forEach((note,i)=> {
-            if(!(i === 0 || i === 1)){
-                invertedNotesArray.push(note); 
+
+        } else if(inversionType === "fourth"){
+            switch(length){
+                case 2:
+                    //same as original 
+                    invertedNotesArray.push(notesArray[0]); 
+                    invertedNotesArray.push(notesArray[1]);
+                    break; 
+                case 3: 
+                    //same as first inversion 
+                    invertedNotesArray.push(notesArray[1]); 
+                    invertedNotesArray.push(notesArray[2]);
+                    invertedNotesArray.push(notesArray[0]);
+                    break;
+                case 4: 
+                    //same as original 
+                    invertedNotesArray = notesArray; 
+                    break; 
+                case 5:  
+                    invertedNotesArray.push(notesArray[4]);
+                    invertedNotesArray.push(notesArray[0]);
+                    invertedNotesArray.push(notesArray[1]);
+                    invertedNotesArray.push(notesArray[2]);
+                    invertedNotesArray.push(notesArray[3]);
+                    break; 
+                case 6: 
+                    invertedNotesArray.push(notesArray[4]);
+                    invertedNotesArray.push(notesArray[5]);
+                    invertedNotesArray.push(notesArray[0]);
+                    invertedNotesArray.push(notesArray[1]);
+                    invertedNotesArray.push(notesArray[2]);
+                    invertedNotesArray.push(notesArray[3]);
+                    break; 
+                default: 
+                    break; 
             }
-        }); 
-        invertedNotesArray.push(notesArray[0]);
-        invertedNotesArray.push(notesArray[1]); 
+        } else {
+            return ("error"); 
+        }
+        
     }
     /////////////////////////////////////////
 
@@ -1667,51 +1825,79 @@ function extendedGuitarChords(notesArray){
             "6sRoot": sixthStringRootExt(notesArray),
             "6sRootInv1": inversionExt(notesArray,6,"first"),
             "6sRootInv2": inversionExt(notesArray,6,"second"),
+            "6sRootInv3": inversionExt(notesArray,6,"third"),
+            "6sRootInv4": inversionExt(notesArray,6,"fourth"),
             "6-1": consecutiveNoteChordsExt(6,1,notesArray),
             "6-1inv1": inversionsOfConsecutiveNoteChordsExt(6,1,notesArray,"first"),
             "6-1inv2": inversionsOfConsecutiveNoteChordsExt(6,1,notesArray,"second"),
+            "6-1inv3": inversionsOfConsecutiveNoteChordsExt(6,1,notesArray,"third"),
+            "6-1inv4": inversionsOfConsecutiveNoteChordsExt(6,1,notesArray,"fourth"),
             "6-2": consecutiveNoteChordsExt(6,2,notesArray),
             "6-2inv1": inversionsOfConsecutiveNoteChordsExt(6,2,notesArray,"first"),
             "6-2inv2": inversionsOfConsecutiveNoteChordsExt(6,2,notesArray,"second"),
+            "6-2inv3": inversionsOfConsecutiveNoteChordsExt(6,2,notesArray,"third"),
+            "6-2inv4": inversionsOfConsecutiveNoteChordsExt(6,2,notesArray,"fourth"),
             "6-3": consecutiveNoteChordsExt(6,3,notesArray),
             "6-3inv1": inversionsOfConsecutiveNoteChordsExt(6,3,notesArray,"first"),
             "6-3inv2": inversionsOfConsecutiveNoteChordsExt(6,3,notesArray,"second"),
+            "6-3inv3": inversionsOfConsecutiveNoteChordsExt(6,3,notesArray,"third"),
+            "6-3inv4": inversionsOfConsecutiveNoteChordsExt(6,3,notesArray,"fourth"),
             "6-4": consecutiveNoteChordsExt(6,4,notesArray),
             "6-4inv1": inversionsOfConsecutiveNoteChordsExt(6,4,notesArray,"first"),
-            "6-4inv2": inversionsOfConsecutiveNoteChordsExt(6,4,notesArray,"second")
+            "6-4inv2": inversionsOfConsecutiveNoteChordsExt(6,4,notesArray,"second"),
+            "6-4inv3": inversionsOfConsecutiveNoteChordsExt(6,4,notesArray,"third"),
+            "6-4inv4": inversionsOfConsecutiveNoteChordsExt(6,4,notesArray,"fourth")
         },
         "5": {
             "5sRoot": fifthStringRootExt(notesArray),
             "5sRootInv1": inversionExt(notesArray,5,"first"),
             "5sRootInv2": inversionExt(notesArray,5,"second"),
+            "5sRootInv3": inversionExt(notesArray,5,"third"),
+            "5sRootInv4": inversionExt(notesArray,5,"fourth"),
             "5-1": consecutiveNoteChordsExt(5,1,notesArray),
             "5-1inv1": inversionsOfConsecutiveNoteChordsExt(5,1,notesArray,"first"),
             "5-1inv2": inversionsOfConsecutiveNoteChordsExt(5,1,notesArray,"second"),
+            "5-1inv3": inversionsOfConsecutiveNoteChordsExt(5,1,notesArray,"third"),
+            "5-1inv4": inversionsOfConsecutiveNoteChordsExt(5,1,notesArray,"fourth"),
             "5-2": consecutiveNoteChordsExt(5,2,notesArray),
             "5-2inv1": inversionsOfConsecutiveNoteChordsExt(5,2,notesArray,"first"),
             "5-2inv2": inversionsOfConsecutiveNoteChordsExt(5,2,notesArray,"second"),
+            "5-2inv3": inversionsOfConsecutiveNoteChordsExt(5,2,notesArray,"third"),
+            "5-2inv4": inversionsOfConsecutiveNoteChordsExt(5,2,notesArray,"fourth"),
             "5-3": consecutiveNoteChordsExt(5,3,notesArray),
             "5-3inv1": inversionsOfConsecutiveNoteChordsExt(5,3,notesArray,"first"),
             "5-3inv2": inversionsOfConsecutiveNoteChordsExt(5,3,notesArray,"second"),
+            "5-3inv3": inversionsOfConsecutiveNoteChordsExt(5,3,notesArray,"third"),
+            "5-3inv4": inversionsOfConsecutiveNoteChordsExt(5,3,notesArray,"fourth"),
         },
         "4": {
             "4sRoot": fourthStringRootExt(notesArray),
             "4sRootInv1": inversionExt(notesArray,4,"first"),
             "4sRootInv2": inversionExt(notesArray,4,"second"),
+            "4sRootInv3": inversionExt(notesArray,4,"third"),
+            "4sRootInv4": inversionExt(notesArray,4,"fourth"),
             "4-1": consecutiveNoteChordsExt(4,1,notesArray),
             "4-1inv1": inversionsOfConsecutiveNoteChordsExt(4,1,notesArray,"first"),
             "4-1inv2": inversionsOfConsecutiveNoteChordsExt(4,1,notesArray,"second"),
+            "4-1inv3": inversionsOfConsecutiveNoteChordsExt(4,1,notesArray,"third"),
+            "4-1inv4": inversionsOfConsecutiveNoteChordsExt(4,1,notesArray,"fourth"),
             "4-2": consecutiveNoteChordsExt(4,2,notesArray),
             "4-2inv1": inversionsOfConsecutiveNoteChordsExt(4,2,notesArray,"first"),
             "4-2inv2": inversionsOfConsecutiveNoteChordsExt(4,2,notesArray,"second"),
+            "4-2inv3": inversionsOfConsecutiveNoteChordsExt(4,2,notesArray,"third"),
+            "4-2inv4": inversionsOfConsecutiveNoteChordsExt(4,2,notesArray,"fourth"),
         },
         "3": {
             "3sRoot": thirdStringRootExt(notesArray),
             "3sRootInv1": inversionExt(notesArray,3,"first"),
             "3sRootInv2": inversionExt(notesArray,3,"second"),
+            "3sRootInv3": inversionExt(notesArray,3,"third"),
+            "3sRootInv4": inversionExt(notesArray,3,"fourth"),
             "3-1": consecutiveNoteChordsExt(3,1,notesArray),
             "3-1inv1": inversionsOfConsecutiveNoteChordsExt(3,1,notesArray,"first"),
             "3-1inv2": inversionsOfConsecutiveNoteChordsExt(3,1,notesArray,"second"),
+            "3-1inv3": inversionsOfConsecutiveNoteChordsExt(3,1,notesArray,"third"),
+            "3-1inv4": inversionsOfConsecutiveNoteChordsExt(3,1,notesArray,"fourth"),
         }
     }; 
     return chordObject; 

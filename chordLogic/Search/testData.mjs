@@ -73,12 +73,14 @@ export const rootD = [
                 type: "m7",
                 notes: ['x','x','o',2,1,1]
             },
+            /*
             {
                 type: "halfdim",
                 notes: [10,11,12,13,13,13]
             },
+            */
             {
-                type: "halfdimb9",
+                type: "m7b9",
                 notes: [10,'x',10,10,10,11]
             },
             {
@@ -128,22 +130,28 @@ export const rootD = [
                 type: "9",
                 notes: ['x',5,4,5,5,'x']
             },
+            /*
             {
                 type: "dom7#9",
                 notes: ['x','x',12,11,13,13]
             },
+            */
             {
                 type: "dom7#9",
                 notes: ['x',5,4,5,6,'x']
-            },
+            }
+            ,
+            /*
             {
                 type: "dom7#9",
                 notes: [10,'x',10,11,10,13]
             },
+            
             {
                 type: "dom7#9",
                 notes: [10,'x',10,11,13,13]
             },
+            */ 
         ]
     },
     {
@@ -155,10 +163,12 @@ export const rootD = [
                 type: "aug",
                 notes: ['x',9,8,7,7,'x']
             },
+            /*
             {
                 type: "aug",
                 notes: ['x',13,12,11,11,'x']
             },
+            */
             {
                 type: "aug",
                 notes: [10,'x',12,11,11,10]
@@ -182,10 +192,12 @@ export const rootD = [
                 type: "dim",
                 notes: [10,'x',9,10,9,10]
             },
+            /*
             {
                 type: "halfdim",
                 notes: [10,11,12,13,13,13]
             },
+            */ 
         ]
     },
     {
@@ -268,10 +280,12 @@ export const rootD = [
                 type: "M7",
                 notes: ['x','x',7,7,7,9]
             },
+            /*
             {
                 type: "M7",
                 notes: ['x','x',12,11,14,'x']
             },
+            */
             {
                 type: "M7",
                 notes: ['x',5,4,6,'x','x']
@@ -339,10 +353,12 @@ export const rootD = [
                 type: "m7",
                 notes: ['x','x','x',7,6,8]
             },
+            /*
             {
                 type: "m7",
                 notes: ['x','x',12,10,13,'x']
             },
+            */
             {
                 type: "m7",
                 notes: ['x',5,3,5,'x','x']
@@ -355,10 +371,12 @@ export const rootD = [
                 type: "m7",
                 notes: ['x','x','x',5,3,1]
             },
+            /*
             {
                 type: "m7",
                 notes: ['x','x','x',10,13,10]
             },
+            */
             {
                 type: "m7",
                 notes: ['x','x',3,5,3,'x']
@@ -398,10 +416,12 @@ export const rootD = [
                 type: "7",
                 notes: ['x','x', 7,7,7,8]
             },
+            /*
             {
                 type: "7",
                 notes: ['x','x', 12,11,13,'x']
             },
+            */
             {
                 type: "7",
                 notes: ['x',5,4,5,'x','x']
@@ -414,10 +434,12 @@ export const rootD = [
                 type: "7",
                 notes: ['x','x', 'x',5,3,2]
             },
+            /*
             {
                 type: "7",
                 notes: ['x','x', 'x',11,13,10]
             },
+            */
             {
                 type: "7",
                 notes: ['x',9,10,7,'x','x']
@@ -430,10 +452,12 @@ export const rootD = [
                 type: "dom7#5",
                 notes: ['x',5,8,5,7,6]
             },
+            /*
             {
                 type: "dom7#5",
                 notes: [10,13,10,11,'x','x']
             },
+            */
         ]
     },
     {
@@ -513,10 +537,12 @@ export const rootD = [
                 type: "halfdim",
                 notes: ['x','x',6,7,6,8]
             },
+            /*
             {
                 type: "halfdim",
                 notes: ['x',11,12,10,13,'x']
             },
+            */
             {
                 type: "halfdim",
                 notes: [4,5,3,5,'x','x']
@@ -580,10 +606,12 @@ export const rootD = [
                 type: "aug",
                 notes: ['x','x',8,7,7,'x']
             },
+            /*
             {
                 type: "aug",
                 notes: ['x',13,12,11,'x','x']
             },
+            */
             {
                 type: "aug",
                 notes: [6,5,4,'x','x','x']
@@ -715,10 +743,12 @@ export const rootD = [
                 type: "5add9",
                 notes: ['x',5,7,9,'x','x']
             },
+            /*
             {
                 type: "5add9",
                 notes: [10,12,14,'x','x','x']
             },
+            */
             {
                 type: "5add6/9",
                 notes: ['x','x',2,4,3,5]
@@ -885,56 +915,60 @@ export const rootD = [
                 type: "halfdim",
                 notes: ['x','x',6,7,6,8]
             },
+            /*
             {
                 type: "halfdim",
                 notes: ['x',11,12,10,13,'x']
             },
+            */
             {
                 type: "halfdim",
                 notes: [4,5,3,5,'x','x']
             },
             {
-                type: "min7b9",
+                type: "m7b9",
                 notes: ['x','x',10,10,10,11]
             },
             {
-                type: "min7b9",
+                type: "m7b9",
                 notes: ['x',3,3,2,4,'x']
             },
             {
-                type: "min7b9",
+                type: "m7b9",
                 notes: [8,8,7,8,'x','x']
             },
             {
-                type: "min7b9",
+                type: "m7b9",
                 notes: ['x','x',1,2,1,1]
             },
             {
-                type: "min7b9",
+                type: "m7b9",
                 notes: ['x',6,7,5,6,'x']
             },
             {
-                type: "min7b9",
+                type: "m7b9",
                 notes: [11,12,10,10,'x','x']
             },
             {
-                type: "min7b9",
+                type: "m7b9",
                 notes: ['x','x','x',5,4,1]
             },
+            /*
             {
                 type: "min7b9",
                 notes: ['x','x','x',10,13,11]
             },
+            */
             {
-                type: "min7b9",
+                type: "m7b9",
                 notes: ['x','x',3,5,4,'x']
             },
             {
-                type: "min7b9",
+                type: "m7b9",
                 notes: ['x',8,10,8,'x','x']
             },
             {
-                type: "min7b9",
+                type: "m7b9",
                 notes: [1,3,1,'x','x','x']
             },
             {
@@ -953,10 +987,12 @@ export const rootD = [
                 type: "m9",
                 notes: ['x','x','x',5,5,1]
             },
+            /*
             {
                 type: "m9",
                 notes: ['x','x','x',10,13,12]
             },
+            */
             {
                 type: "m9",
                 notes: ['x','x',3,5,5,'x']
@@ -993,10 +1029,12 @@ export const rootD = [
                 type: "minmaj7",
                 notes: ['x',8,7,6,'x','x']
             },
+            /*
             {
                 type: "minmaj7",
                 notes: [13,12,11,'x','x','x']
             },
+            */
             {
                 type: "minmaj7",
                 notes: ['x','x','x',2,2,1]
@@ -1064,10 +1102,12 @@ export const rootD = [
                 type: "dom7b5",
                 notes: ['x','x',6,7,7,8]
             },
+            /*
             {
                 type: "dom7b5",
                 notes: ['x',11,12,11,13,'x']
             },
+            */
             {
                 type: "dom7b5",
                 notes: [4,5,4,5,'x','x']
@@ -1108,10 +1148,12 @@ export const rootD = [
                 type: "dom7#5",
                 notes: ['x','x',8,7,7,8]
             },
+            /*
             {
                 type: "dom7#5",
                 notes: ['x',13,12,11,13,'x']
             },
+            */
             {
                 type: "dom7#5",
                 notes: [6,5,4,5,'x','x']
@@ -1128,10 +1170,12 @@ export const rootD = [
                 type: "dom7#5",
                 notes: [8,9,8,7,'x','x']
             },
+            /*
             {
                 type: "dom7b9",
                 notes: ['x','x',12,11,13,11]
             },
+            */
             {
                 type: "dom7b9",
                 notes: ['x',5,4,5,4,'x']
@@ -1160,10 +1204,12 @@ export const rootD = [
                 type: "dom7b9",
                 notes: ['x','x','x',5,4,2]
             },
+            /*
             {
                 type: "dom7b9",
                 notes: ['x','x','x',11,13,11]
             },
+            */
             {
                 type: "dom7b9",
                 notes: ['x',9,10,8,'x','x']
@@ -1176,10 +1222,12 @@ export const rootD = [
                 type: "9",
                 notes: ['x','x','x',5,5,2]
             },
+            /*
             {
                 type: "9",
                 notes: ['x','x','x',11,13,12]
             },
+            */
             {
                 type: "9",
                 notes: ['x','x',4,5,5,'x']
@@ -1212,10 +1260,12 @@ export const rootD = [
                 type: "9",
                 notes: [12,12,10,11,'x','x']
             },
+            /*
             {
                 type: "dom7#9",
                 notes: ['x','x','x',11,13,13]
             },
+            */
             {
                 type: "dom7#9",
                 notes: ['x','x',4,5,6,'x']
@@ -1247,10 +1297,12 @@ export const rootD = [
                 type: "halfdim",
                 notes: ['x',8,6,5,'x','x']
             },
+            /*
             {
                 type: "halfdim",
                 notes: [13,11,10,'x','x','x']
             },
+            */
             {
                 type: "halfdim",
                 notes: ['x','x','x',1,1,1]
@@ -1265,7 +1317,7 @@ export const rootD = [
             },
             {
                 type: "halfdim",
-                notes: [3,2,2,'x','x','x']
+                notes: [4,3,3,'x','x','x']
             },
             {
                 type: "halfdim",

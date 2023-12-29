@@ -1,0 +1,77 @@
+///////////////////////////////////////
+After adding more voicings for 7th and 9th chords 
+and adding 3rd and 4th inversions for extended chords
+as well as third inversion for guitar logic (only goes up 
+to 7th chords), i repeated testDataSearch 
+- i excluded the following chord types because they have not
+been implemented yet:
+const chordsToExclude = 
+[
+    "6/9", 
+    "add9", 
+    "minmaj7", 
+    "dom7b5", 
+    "dom7#5", 
+    "dom7b9", 
+    "dom7#9", 
+    'aug', 
+    "5add9", 
+    "5sus4", 
+    "add6/9",
+    "5", 
+    "5sus", 
+    "5add6/9"
+];
+
+RESULTS: 
+notes in D major: D E F# G A B C# 
+
+//Big major
+
+XXXX NO CHORDS FOUND :  62 #11  [ 'x', 5, 6, 6, 7, 5 ]
+-D G# C# F# A
+-1 #11 7 3 5 
+------> 11th voicings 
+
+//Big diminished
+
+XXXX NO CHORDS FOUND :  62 dim  [ 10, 'x', 9, 10, 9, 10 ]
+-D x Cb F Ab D 
+1 x bb7 b3 b5 1 
+--------> Fully diminished 
+
+//compact diminished 
+
+XXXX NO CHORDS FOUND :  62 halfdim  [ 8, 9, 6, 7, 'x', 'x' ]
+-C f# Ab D
+-b7 3 b5 1 
+------> dom7b5- doesnt naturally exist 
+
+//Vivid Major
+
+XXXX NO EXACT MATCHES FOUND :  62 M7#11  [ 'x', 'x', 6, 7, 7, 9 ]
+     others found:  [ '62 M9#11' ]
+XXXX NO EXACT MATCHES FOUND :  62 M7#11  [ 4, 5, 4, 6, 'x', 'x' ]
+     others found:  [ '62 M9#11' ]
+XXXX NO EXACT MATCHES FOUND :  62 M7#11  [ 'x', 'x', 11, 11, 9, 10 ]
+     others found:  [ '62 M9#11' ]
+XXXX NO EXACT MATCHES FOUND :  62 M7#11  [ 'x', 'x', 'o', 1, 2, 2 ]
+     others found:  [ '62 M9#11' ]
+XXXX NO EXACT MATCHES FOUND :  62 M7#11  [ 'x', 5, 6, 6, 7, 'x' ]
+     others found:  [ '62 M9#11' ]
+XXXX NO EXACT MATCHES FOUND :  62 M7#11  [ 10, 11, 11, 11, 'x', 'x' ]
+     others found:  [ '62 M9#11' ]
+-------> just due to naming - M7#11 vs M9#11 
+
+
+//vivd minor
+
+
+//vivid diminished
+
+-CONCLUSIONS: 
+
+1)need 11th voicings 
+2) need special chords- dom7b5, fully diminished, 
+3) nomenclature of extended chords- M9#11 vs M7#11
+4) and add excluded chords 

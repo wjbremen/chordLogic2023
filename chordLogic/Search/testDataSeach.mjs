@@ -47,6 +47,9 @@ const midiNotesToNotes = {
 
 }
 
+//chord names not yet implemented- special chords, altered chords, add chords etc
+//to exclude from the testing until implemented
+const chordsToExclude = ["6/9", "add9", "minmaj7", "dom7b5", "dom7#5", "dom7b9", "dom7#9", 'aug', "5add9", "5sus4", "add6/9","5", "5sus", "5add6/9"];
 
 //option: 1- displays all matches found for each input and displays 
 //input info and and NOT FOUND if not found 
@@ -176,10 +179,14 @@ function searchWithTestData(allChords, option){
             console.log("--->" +  category["root"] + " " + chordObj["type"] + " FOUND" );
           } else {
             if(matchingChords.length === 0){
-              console.log("XXXX NO CHORDS FOUND : ", category["root"] + " " + chordObj["type"] + " ",  chordObj["notes"] ); 
+              if( !(chordsToExclude.includes(chordObj["type"])) ){
+                console.log("XXXX NO CHORDS FOUND : ", category["root"] + " " + chordObj["type"] + " ",  chordObj["notes"] ); 
+              }
             } else {
-              console.log("XXXX NO EXACT MATCHES FOUND : ", category["root"] + " " + chordObj["type"] + " " , chordObj["notes"] ); 
-              console.log("     others found: ",  matchesNoDups); 
+              if( !(chordsToExclude.includes(chordObj["type"])) ){
+                console.log("XXXX NO EXACT MATCHES FOUND : ", category["root"] + " " + chordObj["type"] + " " , chordObj["notes"] ); 
+                console.log("     others found: ",  matchesNoDups);
+              } 
             }
           }
 
@@ -199,7 +206,7 @@ function testSearchOnlyNotFound(){
 }
 
 
-fs.readFile("../Logic/file.json", "utf8", (err, jsonString) => {
+fs.readFile("../file.json", "utf8", (err, jsonString) => {
     if (err) {
       console.log("File read failed:", err);
       return;

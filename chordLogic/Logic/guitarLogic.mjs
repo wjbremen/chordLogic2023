@@ -865,22 +865,101 @@ function inversion(notesArray, startingString, inversionType){
     //get inversion of notesArray
     /////////////////////////////
     let invertedNotesArray =[]; 
-    if(inversionType === "first"){
-        let indexZero = notesArray[0]; 
-        notesArray.forEach((note,i)=> {
-            if(!(i === 0)){
-                invertedNotesArray.push(note); 
+    if(notesArray.length >=2 && notesArray.length <=6){
+        
+        let length = notesArray.length; 
+        if(inversionType === "first"){
+            let indexZero = notesArray[0]; 
+            notesArray.forEach((note,i)=> {
+                if(!(i === 0)){
+                    invertedNotesArray.push(note); 
+                }
+            }); 
+            invertedNotesArray.push(indexZero); 
+        } else if (inversionType === "second"){
+            notesArray.forEach((note,i)=> {
+                if(!(i === 0 || i === 1)){
+                    invertedNotesArray.push(note); 
+                }
+            }); 
+            invertedNotesArray.push(notesArray[0]);
+            invertedNotesArray.push(notesArray[1]); 
+        } else if(inversionType === "third"){
+            switch(length){
+                case 2: 
+                    //switch them
+                    invertedNotesArray.push(notesArray[1]); 
+                    invertedNotesArray.push(notesArray[0]); 
+                    break; 
+                case 3:
+                    //same as original 
+                    invertedNotesArray = notesArray;  
+                    break;
+                case 4: 
+                    //same as first inversion 
+                    invertedNotesArray.push(notesArray[3]); 
+                    invertedNotesArray.push(notesArray[0]);
+                    invertedNotesArray.push(notesArray[1]);
+                    invertedNotesArray.push(notesArray[2]);
+                    break; 
+                case 5: 
+                    invertedNotesArray.push(notesArray[3]); 
+                    invertedNotesArray.push(notesArray[4]);
+                    invertedNotesArray.push(notesArray[0]);
+                    invertedNotesArray.push(notesArray[1]);
+                    invertedNotesArray.push(notesArray[2]);
+                    break; 
+                case 6: 
+                    invertedNotesArray.push(notesArray[3]);
+                    invertedNotesArray.push(notesArray[4]);
+                    invertedNotesArray.push(notesArray[5]);
+                    invertedNotesArray.push(notesArray[0]);
+                    invertedNotesArray.push(notesArray[1]);
+                    invertedNotesArray.push(notesArray[2]);
+                    break; 
+                default: 
+                    break; 
             }
-        }); 
-        invertedNotesArray.push(indexZero); 
-    } else if (inversionType === "second"){
-        notesArray.forEach((note,i)=> {
-            if(!(i === 0 || i === 1)){
-                invertedNotesArray.push(note); 
+
+        } else if(inversionType === "fourth"){
+            switch(length){
+                case 2:
+                    //same as original 
+                    invertedNotesArray.push(notesArray[0]); 
+                    invertedNotesArray.push(notesArray[1]);
+                    break; 
+                case 3: 
+                    //same as first inversion 
+                    invertedNotesArray.push(notesArray[1]); 
+                    invertedNotesArray.push(notesArray[2]);
+                    invertedNotesArray.push(notesArray[0]);
+                    break;
+                case 4: 
+                    //same as original 
+                    invertedNotesArray = notesArray; 
+                    break; 
+                case 5:  
+                    invertedNotesArray.push(notesArray[4]);
+                    invertedNotesArray.push(notesArray[0]);
+                    invertedNotesArray.push(notesArray[1]);
+                    invertedNotesArray.push(notesArray[2]);
+                    invertedNotesArray.push(notesArray[3]);
+                    break; 
+                case 6: 
+                    invertedNotesArray.push(notesArray[4]);
+                    invertedNotesArray.push(notesArray[5]);
+                    invertedNotesArray.push(notesArray[0]);
+                    invertedNotesArray.push(notesArray[1]);
+                    invertedNotesArray.push(notesArray[2]);
+                    invertedNotesArray.push(notesArray[3]);
+                    break; 
+                default: 
+                    break; 
             }
-        }); 
-        invertedNotesArray.push(notesArray[0]);
-        invertedNotesArray.push(notesArray[1]); 
+        } else {
+            return ("error"); 
+        }
+        
     }
     /////////////////////////////////////////
 
@@ -1106,22 +1185,101 @@ function inversionsOfConsecutiveNoteChords(startingString, endingString,notesArr
     //get inversion of notesArray
     /////////////////////////////
     let invertedNotesArray =[]; 
-    if(inversionType === "first"){
-        let indexZero = notesArray[0]; 
-        notesArray.forEach((note,i)=> {
-            if(!(i === 0)){
-                invertedNotesArray.push(note); 
+    if(notesArray.length >=2 && notesArray.length <=6){
+        
+        let length = notesArray.length; 
+        if(inversionType === "first"){
+            let indexZero = notesArray[0]; 
+            notesArray.forEach((note,i)=> {
+                if(!(i === 0)){
+                    invertedNotesArray.push(note); 
+                }
+            }); 
+            invertedNotesArray.push(indexZero); 
+        } else if (inversionType === "second"){
+            notesArray.forEach((note,i)=> {
+                if(!(i === 0 || i === 1)){
+                    invertedNotesArray.push(note); 
+                }
+            }); 
+            invertedNotesArray.push(notesArray[0]);
+            invertedNotesArray.push(notesArray[1]); 
+        } else if(inversionType === "third"){
+            switch(length){
+                case 2: 
+                    //switch them
+                    invertedNotesArray.push(notesArray[1]); 
+                    invertedNotesArray.push(notesArray[0]); 
+                    break; 
+                case 3:
+                    //same as original 
+                    invertedNotesArray = notesArray;  
+                    break;
+                case 4: 
+                    //same as first inversion 
+                    invertedNotesArray.push(notesArray[3]); 
+                    invertedNotesArray.push(notesArray[0]);
+                    invertedNotesArray.push(notesArray[1]);
+                    invertedNotesArray.push(notesArray[2]);
+                    break; 
+                case 5: 
+                    invertedNotesArray.push(notesArray[3]); 
+                    invertedNotesArray.push(notesArray[4]);
+                    invertedNotesArray.push(notesArray[0]);
+                    invertedNotesArray.push(notesArray[1]);
+                    invertedNotesArray.push(notesArray[2]);
+                    break; 
+                case 6: 
+                    invertedNotesArray.push(notesArray[3]);
+                    invertedNotesArray.push(notesArray[4]);
+                    invertedNotesArray.push(notesArray[5]);
+                    invertedNotesArray.push(notesArray[0]);
+                    invertedNotesArray.push(notesArray[1]);
+                    invertedNotesArray.push(notesArray[2]);
+                    break; 
+                default: 
+                    break; 
             }
-        }); 
-        invertedNotesArray.push(indexZero); 
-    } else if (inversionType === "second"){
-        notesArray.forEach((note,i)=> {
-            if(!(i === 0 || i === 1)){
-                invertedNotesArray.push(note); 
+
+        } else if(inversionType === "fourth"){
+            switch(length){
+                case 2:
+                    //same as original 
+                    invertedNotesArray.push(notesArray[0]); 
+                    invertedNotesArray.push(notesArray[1]);
+                    break; 
+                case 3: 
+                    //same as first inversion 
+                    invertedNotesArray.push(notesArray[1]); 
+                    invertedNotesArray.push(notesArray[2]);
+                    invertedNotesArray.push(notesArray[0]);
+                    break;
+                case 4: 
+                    //same as original 
+                    invertedNotesArray = notesArray; 
+                    break; 
+                case 5:  
+                    invertedNotesArray.push(notesArray[4]);
+                    invertedNotesArray.push(notesArray[0]);
+                    invertedNotesArray.push(notesArray[1]);
+                    invertedNotesArray.push(notesArray[2]);
+                    invertedNotesArray.push(notesArray[3]);
+                    break; 
+                case 6: 
+                    invertedNotesArray.push(notesArray[4]);
+                    invertedNotesArray.push(notesArray[5]);
+                    invertedNotesArray.push(notesArray[0]);
+                    invertedNotesArray.push(notesArray[1]);
+                    invertedNotesArray.push(notesArray[2]);
+                    invertedNotesArray.push(notesArray[3]);
+                    break; 
+                default: 
+                    break; 
             }
-        }); 
-        invertedNotesArray.push(notesArray[0]);
-        invertedNotesArray.push(notesArray[1]); 
+        } else {
+            return ("error"); 
+        }
+        
     }
     /////////////////////////////////////////
 
@@ -1254,51 +1412,65 @@ function guitarChords(notesArray){
             "6sRoot": sixthStringRoot(notesArray),
             "6sRootInv1": inversion(notesArray,6,"first"),
             "6sRootInv2": inversion(notesArray,6,"second"),
+            "6sRootInv3": inversion(notesArray,6,"third"),
             "6-1": consecutiveNoteChords(6,1,notesArray),
             "6-1inv1": inversionsOfConsecutiveNoteChords(6,1,notesArray,"first"),
             "6-1inv2": inversionsOfConsecutiveNoteChords(6,1,notesArray,"second"),
+            "6-1inv3": inversionsOfConsecutiveNoteChords(6,1,notesArray,"third"),
             "6-2": consecutiveNoteChords(6,2,notesArray),
             "6-2inv1": inversionsOfConsecutiveNoteChords(6,2,notesArray,"first"),
             "6-2inv2": inversionsOfConsecutiveNoteChords(6,2,notesArray,"second"),
+            "6-2inv3": inversionsOfConsecutiveNoteChords(6,2,notesArray,"third"),
             "6-3": consecutiveNoteChords(6,3,notesArray),
             "6-3inv1": inversionsOfConsecutiveNoteChords(6,3,notesArray,"first"),
             "6-3inv2": inversionsOfConsecutiveNoteChords(6,3,notesArray,"second"),
+            "6-3inv3": inversionsOfConsecutiveNoteChords(6,3,notesArray,"third"),
             "6-4": consecutiveNoteChords(6,4,notesArray),
             "6-4inv1": inversionsOfConsecutiveNoteChords(6,4,notesArray,"first"),
-            "6-4inv2": inversionsOfConsecutiveNoteChords(6,4,notesArray,"second")
+            "6-4inv2": inversionsOfConsecutiveNoteChords(6,4,notesArray,"second"),
+            "6-4inv3": inversionsOfConsecutiveNoteChords(6,4,notesArray,"third")
         },
         "5": {
             "5sRoot": fifthStringRoot(notesArray),
             "5sRootInv1": inversion(notesArray,5,"first"),
             "5sRootInv2": inversion(notesArray,5,"second"),
+            "5sRootInv3": inversion(notesArray,5,"third"),
             "5-1": consecutiveNoteChords(5,1,notesArray),
             "5-1inv1": inversionsOfConsecutiveNoteChords(5,1,notesArray,"first"),
             "5-1inv2": inversionsOfConsecutiveNoteChords(5,1,notesArray,"second"),
+            "5-1inv3": inversionsOfConsecutiveNoteChords(5,1,notesArray,"third"),
             "5-2": consecutiveNoteChords(5,2,notesArray),
             "5-2inv1": inversionsOfConsecutiveNoteChords(5,2,notesArray,"first"),
             "5-2inv2": inversionsOfConsecutiveNoteChords(5,2,notesArray,"second"),
+            "5-2inv3": inversionsOfConsecutiveNoteChords(5,2,notesArray,"third"),
             "5-3": consecutiveNoteChords(5,3,notesArray),
             "5-3inv1": inversionsOfConsecutiveNoteChords(5,3,notesArray,"first"),
             "5-3inv2": inversionsOfConsecutiveNoteChords(5,3,notesArray,"second"),
+            "5-3inv3": inversionsOfConsecutiveNoteChords(5,3,notesArray,"third"),
         },
         "4": {
             "4sRoot": fourthStringRoot(notesArray),
             "4sRootInv1": inversion(notesArray,4,"first"),
             "4sRootInv2": inversion(notesArray,4,"second"),
+            "4sRootInv3": inversion(notesArray,4,"third"),
             "4-1": consecutiveNoteChords(4,1,notesArray),
             "4-1inv1": inversionsOfConsecutiveNoteChords(4,1,notesArray,"first"),
             "4-1inv2": inversionsOfConsecutiveNoteChords(4,1,notesArray,"second"),
+            "4-1inv3": inversionsOfConsecutiveNoteChords(4,1,notesArray,"third"),
             "4-2": consecutiveNoteChords(4,2,notesArray),
             "4-2inv1": inversionsOfConsecutiveNoteChords(4,2,notesArray,"first"),
             "4-2inv2": inversionsOfConsecutiveNoteChords(4,2,notesArray,"second"),
+            "4-2inv3": inversionsOfConsecutiveNoteChords(4,2,notesArray,"third"),
         },
         "3": {
             "3sRoot": thirdStringRoot(notesArray),
             "3sRootInv1": inversion(notesArray,3,"first"),
             "3sRootInv2": inversion(notesArray,3,"second"),
+            "3sRootInv3": inversion(notesArray,3,"third"),
             "3-1": consecutiveNoteChords(3,1,notesArray),
             "3-1inv1": inversionsOfConsecutiveNoteChords(3,1,notesArray,"first"),
             "3-1inv2": inversionsOfConsecutiveNoteChords(3,1,notesArray,"second"),
+            "3-1inv3": inversionsOfConsecutiveNoteChords(3,1,notesArray,"third"),
         }
     }; 
     return chordObject; 
