@@ -35,11 +35,11 @@ export const rootD = [
                 notes: ['x',5,4,6,5,'x']
             },
             {
-                type: "6/9",
+                type: "add6/9",
                 notes: [10,'x','x',11,12,12]
             },
             {
-                type: "6/9",
+                type: "add6/9",
                 notes: ['x',5,4,4,5,'x']
             },
             {
@@ -805,31 +805,31 @@ export const rootD = [
                 notes: [9,9,7,9,'x','x']
             },
             {
-                type: "6/9",
+                type: "add6/9",
                 notes: ['x','x','x',11,12,12]
             },
             {
-                type: "6/9",
+                type: "add6/9",
                 notes: ['x','x',4,4,5,5]
             },
             {
-                type: "6/9",
+                type: "add6/9",
                 notes: ['x',9,9,9,10,'x']
             },
             {
-                type: "6/9",
+                type: "add6/9",
                 notes: [2,2,2,2,'x','x']
             },
             {
-                type: "6/9",
+                type: "add6/9",
                 notes: ['x','x',9,11,10,12]
             },
             {
-                type: "6/9",
+                type: "add6/9",
                 notes: ['x',2,4,2,5,'x']
             },
             {
-                type: "6/9",
+                type: "add6/9",
                 notes: [7,9,7,9,'x','x']
             },
             {
