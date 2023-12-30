@@ -1,0 +1,46 @@
+
+notes in D major scale 
+D E F# G A B C# 
+
+-6/9 chord 
+D, F#, B E 
+1, 3, 6, 9 
+D F# B E
+1, 3, 6, 9 
+-Dadd6/9
+D A E B
+1,5,9,6 
+-D5add9 
+D A D E A 
+1 5 1 9 5 
+-Dadd9 
+D F# A E 
+1 3 5 9 
+-D5 
+D, A 
+1,5 
+-5add6/9 
+E B D A 
+9 6 1 5 
+-5add6 
+
+-add6/9, anything with 5th
+CHORDS TO ADD BY SCALE DEGREE: 
+
+1: 
+
+2: 
+
+3: 
+
+4: 
+
+5: 
+
+6: 
+
+7: 
+
+
+SPECIAL CHORDS: 
+-other combinations like sus4add9 
