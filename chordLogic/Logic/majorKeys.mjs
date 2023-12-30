@@ -90,6 +90,9 @@ const chords3And4notes = {
         {notes: [1,2,5],name: "sus2", htmlName: null},
         {notes: [1,4,5],name: "sus4", htmlName: null},
         {notes: [1,5],name: "5", htmlName: null},
+        {notes: [1,5,9,13],name: "5add6/9", htmlName: null},
+        {notes: [1,5,13],name: "5add6", htmlName: null},
+        {notes: [1,5,9],name: "5add9", htmlName: null},
     ],
     2: [
         {notes: [1,"b3",5],name: "m", htmlName: null},
@@ -100,6 +103,9 @@ const chords3And4notes = {
         {notes: [1,2,5],name: "sus2", htmlName: null},
         {notes: [1,4,5],name: "sus4", htmlName: null},
         {notes: [1,5],name: "5", htmlName: null},
+        {notes: [1,5,9,13],name: "5add6/9", htmlName: null},
+        {notes: [1,5,13],name: "5add6", htmlName: null},
+        {notes: [1,5,9],name: "5add9", htmlName: null},
     ],
     3: [
         {notes: [1,"b3",5],name: "m", htmlName: null},
@@ -109,6 +115,9 @@ const chords3And4notes = {
         {notes: [1,"b3",5,"b13"],name: "maddb6", htmlName: null},
         {notes: [1,4,5],name: "sus4", htmlName: null},
         {notes: [1,5],name: "5", htmlName: null},
+        {notes: [1,5,"b9","b13"],name: "5addb6/b9", htmlName: null},
+        {notes: [1,5,"b13"],name: "5addb6", htmlName: null},
+        {notes: [1,5,"b9"],name: "5addb9", htmlName: null},
     ],
     4: [
         {notes: [1,3,5],name: "M", htmlName: null},
@@ -118,6 +127,9 @@ const chords3And4notes = {
         {notes: [1,3,5,13],name: "add6", htmlName: null},
         {notes: [1,2,5],name: "sus2", htmlName: null},
         {notes: [1,5],name: "5", htmlName: null},
+        {notes: [1,5,9,13],name: "5add6/9", htmlName: null},
+        {notes: [1,5,13],name: "5add6", htmlName: null},
+        {notes: [1,5,9],name: "5add9", htmlName: null},
     ],
     5: [
         {notes: [1,3,5],name: "M", htmlName: null},
@@ -128,6 +140,9 @@ const chords3And4notes = {
         {notes: [1,2,5],name: "sus2", htmlName: null},
         {notes: [1,4,5],name: "sus4", htmlName: null},
         {notes: [1,5],name: "5", htmlName: null},
+        {notes: [1,5,9,13],name: "5add6/9", htmlName: null},
+        {notes: [1,5,13],name: "5add6", htmlName: null},
+        {notes: [1,5,9],name: "5add9", htmlName: null},
     ],
     6: [
         {notes: [1,"b3",5],name: "m", htmlName: null},
@@ -138,6 +153,9 @@ const chords3And4notes = {
         {notes: [1,2,5],name: "sus2", htmlName: null},
         {notes: [1,4,5],name: "sus4", htmlName: null},
         {notes: [1,5],name: "5", htmlName: null},
+        {notes: [1,5,9,"b13"],name: "5addb6/9", htmlName: null},
+        {notes: [1,5,9],name: "5add9", htmlName: null},
+        {notes: [1,5,"b13"],name: "5addb6", htmlName: null},
     ],
     7: [
         {notes: [1,"b3","b5"],name: "dim", htmlName: null},
@@ -146,7 +164,10 @@ const chords3And4notes = {
         {notes: [1,"b3","b5",11],name: "dimadd4", htmlName: null},
         {notes: [1,"b3","b5","b13"],name: "dimaddb6", htmlName: null},
         {notes: [1,4,"b5"],name: "sus4dim5", htmlName: null},
-        {notes: [1,5],name: "b5", htmlName: null},
+        {notes: [1,"b5"],name: "b5", htmlName: null},
+        {notes: [1,"b5","b9","b13"],name: "dim5addb6/b9", htmlName: null},
+        {notes: [1,"b5","b13"],name: "dim5addb6", htmlName: null},
+        {notes: [1,"b5","b9"],name: "dim5addb9", htmlName: null},
     ]
     
 };

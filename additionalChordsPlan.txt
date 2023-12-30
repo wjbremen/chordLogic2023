@@ -24,6 +24,13 @@ E B D A
 9 6 1 5 
 -5add6 
 
+******************
+****5 chords will be a special case: can span up to 6 strings or as
+little as 2 (we do not have 2 string voicings now)
+*******************
+-but can add 5add6, 5add9 and 5add6/9 becuase they have 
+3 to 4 notes 
+
 -add6/9, anything with 5th
 CHORDS TO ADD BY SCALE DEGREE: 
 

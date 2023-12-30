@@ -49,7 +49,7 @@ const midiNotesToNotes = {
 
 //chord names not yet implemented- special chords, altered chords, add chords etc
 //to exclude from the testing until implemented
-const chordsToExclude = ["minmaj7", "dom7b5", "dom7#5", "dom7b9", "dom7#9", 'aug', "5add9", "5sus4", "add6/9", "5sus", "5add6/9"];
+const chordsToExclude = ["minmaj7", "dom7b5", "dom7#5", "dom7b9", "dom7#9", 'aug',"5",  "5sus4",  "5sus"];
 
 //option: 1- displays all matches found for each input and displays 
 //input info and and NOT FOUND if not found 

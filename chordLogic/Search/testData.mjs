@@ -763,7 +763,7 @@ export const rootD = [
             },
             {
                 type: "5add6/9",
-                notes: [9,9,10,10,'x','x']
+                notes: ['x','x',9,9,10,10]
             },
             {
                 type: "5add6/9",
