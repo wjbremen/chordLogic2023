@@ -47,9 +47,13 @@ const midiNotesToNotes = {
 
 }
 
+///*************\
+// */  find a way to add : sus equiv to sus4, add2 equiv to add9
+
+
 //chord names not yet implemented- special chords, altered chords, add chords etc
 //to exclude from the testing until implemented
-const chordsToExclude = ["minmaj7", "dom7b5", "dom7#5", "dom7b9", "dom7#9", 'aug',"5",  "5sus4",  "5sus"];
+const chordsToExclude = ["minmaj7", "dom7b5", "dom7#5", "dom7b9", "dom7#9", 'aug',"5"];
 
 //option: 1- displays all matches found for each input and displays 
 //input info and and NOT FOUND if not found 

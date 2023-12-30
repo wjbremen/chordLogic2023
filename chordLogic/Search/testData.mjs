@@ -214,7 +214,7 @@ export const rootD = [
                 notes: ['x',5,7,7,5,5]
             },
             {
-                type: "5sus4",
+                type: "sus4",
                 notes: ['x',5,7,7,8,'x']
             },
         ]
@@ -664,51 +664,51 @@ export const rootD = [
                 notes: [5,5,'x','x','x','x']
             },
             {
-                type: "5sus",
+                type: "sus4",
                 notes: ['x','x','x',12,10,10]
             },
             {
-                type: "5sus",
+                type: "sus4",
                 notes: ['x','x',5,2,3,'x']
             },
             {
-                type: "5sus",
+                type: "sus4",
                 notes: ['x',10,7,7,'x','x']
             },
             {
-                type: "5sus",
+                type: "sus4",
                 notes: [3,'o','o','x','x','x']
             },
             {
-                type: "5sus",
+                type: "sus4",
                 notes: ['x','x','x',7,8,5]
             },
             {
-                type: "5sus",
+                type: "sus4",
                 notes: ['x','x',12,12,10,'x']
             },
             {
-                type: "5sus",
+                type: "sus4",
                 notes: ['x',5,5,2,'x','x']
             },
             {
-                type: "5sus",
+                type: "sus4",
                 notes: [10,10,7,'x','x','x']
             },
             {
-                type: "5sus",
-                notes: [2,3,3,'x','x','x']
+                type: "sus4",
+                notes: ['x','x','x',2,3,3]
             },
             {
-                type: "5sus",
+                type: "sus4",
                 notes: ['x','x',7,7,8,'x']
             },
             {
-                type: "5sus",
+                type: "sus4",
                 notes: ['x','o','o','o','x','x']
             },
             {
-                type: "5sus",
+                type: "sus4",
                 notes: [5,5,5,'x','x','x']
             },
             {
