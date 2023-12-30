@@ -1387,7 +1387,7 @@ function inversionExt(notesArray, startingString, inversionType){
 
 }
 
-console.log(arrayOfChordArraysToFrets(inversionExt([62,65,68,72], 4, "third"))); 
+//console.log(arrayOfChordArraysToFrets(inversionExt([62,65,68,72], 4, "third"))); 
 
 ////////////////////////////////////////////////
 //// get consecutive note chords starting on 
