@@ -1,0 +1,11 @@
+
+notes in D major scale 
+D E F# G A B C# 
+
+-D5 
+D, A 
+1,5 
+
+******************
+****5 chords will be a special case: can span up to 6 strings or as
+little as 2 (we do not have 2 string voicings now)

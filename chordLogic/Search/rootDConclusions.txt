@@ -144,3 +144,19 @@ or names dont match
 10) git repo 
 11) retest after addition of new chords 
 12) retes with new root from Guitar chord encyclopedia
+
+
+
+/////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////
+///// ACTION PLAN 2 /////
+/////////////////////////////////////////////////////////////////////
+
+1) add 5th chords - special case 
+2) determine if any more chords exist in key
+3) find most common altered chords and which scale degree
+they are usually used on
+4)README for logic folder
+5)remove duplicates 
+6)retest with new root 
+7)special keys- harmonic minor?
