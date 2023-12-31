@@ -10,6 +10,10 @@ special chords to add :
     "dom7b9", 
     "dom7#9", 
     'aug', 
+
+-determine how each chord is used, ie if it is used as an 
+altered chord on a particual scale degree
+-or organize by chord root
 */ 
 allChordsAllKeys.forEach( majorKeyObj => {
     majorKeyObj["specialChords"] = {}; 

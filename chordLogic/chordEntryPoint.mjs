@@ -2,11 +2,12 @@ import { chordPlayablity, allMajorKeys } from "./Logic/allChords.mjs";
 import {allChordsAllKeys} from "./Logic/specialChords.mjs"; 
 import * as fs from 'fs';
 
-let chords = allChordsAllKeys; 
 
-//console.log(allMajorKeys[0]["chords"]["scaleDegree1"]); 
-console.log(chords); 
+//Read data from json
+    //Major keys
+    //special keys
+    //special/altered by root  
 
-fs.writeFile('allMajorKeys.json', JSON.stringify(chords), (error) => {
-    if (error) throw error;
-});
+//update logic README
+
+//retest with new root 
