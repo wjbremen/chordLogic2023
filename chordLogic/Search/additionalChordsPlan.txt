@@ -9,3 +9,23 @@ D, A
 ******************
 ****5 chords will be a special case: can span up to 6 strings or as
 little as 2 (we do not have 2 string voicings now)
+-"subchords category"- so in the future can add other intervals
+
+-altered chords usually done 
+on dominant chords, and the four alterations that 
+are commonly used are the ♭5, ♯5, ♭9 and ♯9. 
+
+plan: 
+1) 5 chords on each scale degree- special case
+-need chords spanning as many as 6 strings and 
+as few as 2 strings
+-only need root and 1st inversion 
+2)so 5 chords should be a part of another
+object called "subchords" with scale degrees 
+-make it so other subchords or intervals can be 
+added later 
+3)altered/special chords should be a new object
+-altered chords that are typically used on a 
+scale degree
+-altered and special chords not associated with a 
+scale degree 

@@ -1476,7 +1476,7 @@ function guitarChords(notesArray){
     return chordObject; 
 }
 
-export {guitarChords, arrayOfChordArraysToFrets, removeChordsWithInternalMutes, getFretboardNotesObject};
+export {guitarChords, getEquivalentMidiNotes, arrayOfChordArraysToFrets, removeChordsWithInternalMutes, getFretboardNotesObject};
 
 //////////////////////
 //// inversion test

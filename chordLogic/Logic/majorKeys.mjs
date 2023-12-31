@@ -242,7 +242,7 @@ function constructChordObject(note,chordInfoObj){
     return chordObj; 
 }
 
-function constructMajorKeyObject(root){
+export function constructMajorKeyObject(root){
     let majorKeyObject = {
         keyRoot: root, 
         chords: {
