@@ -1,11 +1,30 @@
 
+import majkeys from "./jsonFlattened/majorKeysFlatSimple.json" assert { type: "json" }; 
 
 
-fs.readFile("file.json", "utf8", (err, jsonString) => {
-    if (err) {
-      console.log("File read failed:", err);
-      return;
+//console.log(majkeys); 
+
+/*
+let maj62 = []; 
+majkeys.forEach( chordObj => {
+    if(
+        chordObj["chordRoot"] == 62
+        && chordObj["chordName"] == "M"
+       
+    ) {
+        if(
+            chordObj["chord"][0] === "x"
+            && chordObj["chord"][1] === "x"
+            && chordObj["chord"][2] === "o"
+            && chordObj["chord"][3] === 2
+            && chordObj["chord"][4] === 3
+            && chordObj["chord"][5] === 2
+        ){
+            maj62.push(chordObj); 
+        }
     }
-    chordData = JSON.parse(jsonString);
-    console.log(chordData); 
-});
+}); 
+
+console.log(maj62); 
+
+*/

@@ -1,4 +1,4 @@
-import { chordPlayablity, allMajorKeys } from "./Logic/allChords.mjs";
+import { chordPlayablity, allMajorKeys } from "./Logic/scripts/allChords.mjs";
 import {allChordsAllKeys} from "./Logic/specialChords.mjs"; 
 import * as fs from 'fs';
 

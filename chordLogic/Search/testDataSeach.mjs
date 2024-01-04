@@ -1,5 +1,5 @@
 import * as fs from 'fs';
-import { json } from 'stream/consumers';
+//import { json } from 'stream/consumers';
 import { rootD } from './testData.mjs';
 
 
@@ -53,7 +53,7 @@ const midiNotesToNotes = {
 
 //chord names not yet implemented- special chords, altered chords, add chords etc
 //to exclude from the testing until implemented
-const chordsToExclude = ["minmaj7", "dom7b5", "dom7#5", "dom7b9", "dom7#9", 'aug',"5"];
+const chordsToExclude = ["minmaj7", "dom7b5", "dom7#5", "dom7b9", "dom7#9", 'aug'];
 
 //option: 1- displays all matches found for each input and displays 
 //input info and and NOT FOUND if not found 
@@ -86,9 +86,9 @@ function searchWithTestData(allChords, option){
         if(matchingChords.length == 0){
           console.log(chordObj, " NOT FOUND"); 
         } else{
-          console.log( matchingChords.length , " matches found for ", searchArray, "name: ", chordObj["type"]); 
+          console.log( matchingChords.length , " matches found for ", searchArray,"root ", category["root"],  "name: ", chordObj["type"]); 
           matchingChords.forEach((chord,i)=> {
-            console.log((i+1) + ") : " + 'name: '+ midiNotesToNotes[chord["chordRoot"]] + chord["chordName"] + " " + chord["chord"]); 
+            console.log((i+1) + ") : " + 'name: '+ chord["chordRoot"] + " " + chord["chordName"] + " " + chord["chord"] + " ", chord["voicingString"], " ", chord["category"] ); 
           });
         }
       });  
@@ -203,19 +203,13 @@ function searchWithTestData(allChords, option){
 }
 
 
-//search for the test data and log only the following: 
-// no chords found || !(chordInputName == chordFoundName)
-function testSearchOnlyNotFound(){
-
-}
-
-
-fs.readFile("../file.json", "utf8", (err, jsonString) => {
+fs.readFile("jsonFlattened/majorKeysFlatSimple.json", "utf8", (err, jsonString) => {
     if (err) {
       console.log("File read failed:", err);
       return;
     }
     chordData = JSON.parse(jsonString);
-    searchWithTestData(chordData,2);
+    //console.log(chordData); 
+    searchWithTestData(chordData,1);
 });
 
