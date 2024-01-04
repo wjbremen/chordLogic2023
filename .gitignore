@@ -2,3 +2,7 @@ node_modules
 file.json
 allMajorKeys.json
 musicTheoryDocs
+specialAndAlteredChords.json
+specialKeys.json
+chordPlayability.json
+majorKeysFlatSimple.json
