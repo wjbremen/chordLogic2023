@@ -1834,7 +1834,7 @@ function removeChordsWithInternalMutes(chordArray){
         }
     }
 */
-function extendedGuitarChords(notesArray){
+export function extendedGuitarChords(notesArray){
     let chordObject = {
         "notes": notesArray,
         "6": {

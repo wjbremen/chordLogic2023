@@ -1,0 +1,255 @@
+Notes on common alterations to chord progressions
+
+How to Write Interesting Chord Progressions: Chromatic Alterations
+
+// chords in C major
+// C Dm Em F G Am Bdim 
+//A minor: 
+// Am Bdmin C Dm Em F G 
+//notes in C major: 
+// C C# D D# E F F# G G# A A# B 
+
+1) common to use the major V chord instead of the minor v when
+writing in a minor key
+Am Dm Am E instead of Am Dm Am Em 
+
+aside: cycle of fifths progressions sound good- each root descend by a 
+fifth (7 st) or ascends by a fourth (5 st)
+-example Am Dm G C 
+A->D 5st, D->G 5st, G->C 5st, 
+
+2)alter circle of fifths progression to make them major chords
+Am Dm G C -> A D G C
+
+3) alter the diminished chord on 7th degree by flatting the 
+root: 
+C F Bdim F -> C F Bb F 
+B dim- 1 b3 b5 
+if you flat the 1, you get a major third and a perfect fifth
+aka Bb major 
+so chord progression represented by: 
+I IV bVII IV 
+
+4) can also use major chord on the flat third in a similar way: 
+C Em F Em -> C Eb F Eb 
+
+5) substitute minor chord on 4th degree of major progression: 
+C Am F -> C Am Fm 
+-or use it right after the F major 
+C Am F Fm 
+
+When and How to Use Altered Chords in Your Progressions
+1) modal mixture chords- borrowing chords from the parallel 
+minor key
+-most common- changing IV to iv- F major to F minor in the 
+key of C major. Also, changing minor ii to dim ii - Dm to Dmin, 
+or major I to minor i 
+2) consider a secondary dominant chord- try chaning minor to major-
+Dm -> D or D7. works well if the chord that follows it has a root
+that is a fourth above (circle of fifths described above)
+3) consider a flat III, flat VI, or Flat VII- these are types of 
+modal mixtures. so substituting Eb major, Ab major, or Bb major 
+in the key of C
+
+How to use altered chords for better progressions- music radar
+
+-altered chords- chords changed by having one or more notes sharpened 
+or flattened by a semitone
+-eg altering V7 chord to V7b5
+-borrowed chords or modal mixtures or substituted chords- borrowed 
+from parallel major or minor key- considered "color chords", providing
+brief harmonic variation
+
+-start with dominant 9 chord-
+1 3 5 b7 9 - minor 7 and major 9
+-common alterations include the 5th and the 9th 
+
+1)dom7b5 - flattened fifth 
+2)dom7#5 or aug7 - sharpened (augmented) fifth 
+3)dom7b9- flattened 9th 
+4)dom7#9 - sharpened 9th
+
+-these same ideas can be applied to minor and major sevenths as well: 
+-example: im7 III7 -> im7 III7b5
+
+-another useful altered chord- Vaug7#9, great for resolving back to the 
+im7 chord - start with dom 9 chord (1 3 4 b7 9), sharpen 5th, and
+sharpen 9th
+
+Seven Progressions that use altered chords: -secrets of songwriting 
+//A major chords: A Bm C#m D E F#m G#dim 
+
+1) A Dm E7 A - borrowed chord or modal mixture- progression in A major, 
+by Dm comes from A minor key- modal mixtures- great way to add color while
+leaving your key choice undisturbed
+2) A D B7 E7 - seconary dominant chord- makes a note other than the tonic
+sound briefly like a new tonic chord- in A major, B would normally be minor
+Making it major, makes it sound like a dominant chord of E, and adding the 
+7 strengthens that funciton 
+3) A C D E A - flat III chord- dark and edgy. C#m -> C 
+move nicely to IV chords or to flat VI then to V 
+4)A E F G A -flatVI flatVII- interesting cadence inserting these two 
+into the standard V-I cadence. (E is V, F is flat VI, G is flat VII)
+5) A F#m F7 E A - "augmented 6th" chord- based on the flat 6th degree of the
+scale. in A major, flat 6th note is F- play F as root, build a triad, and
+add a minor 7 (this makes a dominant 7), then let the chord resolve to 
+the triad a semitone lower (E) //dominant chord (1 3 5 b7)
+6)  A  D  Eb13 A (The Flat-13 Chord)
+Jazz makes use of many altered chords, and they are particularly useful at cadences. 
+The flat-13 is one of a host of altered chords, and it’s worth getting a book of
+jazz chords if these kind of harmonies interest you. Flat-13 chords are created by 
+counting up 13 notes from the root of the dominant (V) chord, and lowering it a 
+semitone. ??????
+7)A D Bb7 A - tritone substitution- normaly E7 (V7) provides best transiton to the 
+A (I) chord. E7 -> Bb7.  It works primarily because both E7 and Bb7 use the same 
+tritone in their tone set: G# and D.????  To create a tritone substitution, 
+replace any dominant-7th chord with a chord that’s one semitone higher than 
+the tonic. 
+//tritone- 3 whole tones
+
+
+5 Ideas To Turn a Boring Chord Progression Into Something More Exciting
+-see 5 ideas PDF 
+
+
+
+
+STRONG and FRAGILE PROGRESSIONS (all given in C-major):
+Simple progressions can be categorized as either being strong or fragile.
+
+A strong progression is one that clearly points to one note as the key, or tonic, note. They can be used anywhere, and are great especially for chorus melodies, which usually rely on the strong indication of a key.
+
+
+Strong Progressions (To see these progressions in fretboard/musical staff notation, click here.)
+
+C Dm G C
+C Dm7 G C
+C Fmaj7 G7 C
+C Am Dm G C
+C Em Am Dm G7 C
+
+
+
+A fragile progression is one in which a specific chord is not clearly indicated as being the only possible tonic chord. Such a progression, on its own, could point toward two or more chords as being possible tonics, and usually require a strong progression after it to make the clear determination.
+
+Fragile progressions can be used anywhere, but work very well in verse melodies. Keep in mind that most multi-chord progressions are a mixture of strong and fragile elements.
+ 
+
+Fragile Progressions (To see these progressions in fretboard/musical staff notation, click here.)
+
+Dm7 Em7
+Am G F G Am
+Em G Am Em Dm F Am
+C Gm7 Am7 BbMaj7
+ 
+
+
+
+
+
+PROGRESSIONS THAT END ON A DIFFERENT CHORD (DECEPTIVE CADENCE):
+Deceptive Cadences (To see these progressions in fretboard/musical staff notation, click here.)
+
+C F Am G F
+C Dm G Am
+C Am Em G Ab
+ 
+
+ 
+
+
+
+PROGRESSIONS THAT USE DIMINISHED CHORDS:
+(What's a diminished chord?)
+ 
+
+Diminished Chords (To see these progressions in fretboard/musical staff notation, click here.)
+
+C F Fdim7 C
+C Dm Bdim C
+C C#dim Dm G C
+ 
+
+ 
+
+
+
+
+PROGRESSIONS THAT USE INVERTED CHORDS:
+(What's an inverted chord?)
+ 
+
+Inverted Chords
+
+C C/E F G C
+C G/B F/A G C
+C G/B Am F G G/B C
+C G E/G# Am G/B C
+ 
+
+ 
+
+
+
+ 
+
+PROGRESSIONS THAT USE SECONDARY DOMINANT CHORDS:
+(What's a secondary dominant chord?)
+
+ 
+
+Secondary Dominant Chords
+
+C A Dm G C
+C E A Dm G C
+C F D G C
+C D G C
+ 
+
+
+
+PROGRESSIONS THAT USE MODAL MIXTURES:
+(What's a modal mixture chord?)
+
+ 
+
+Modal Mixture Chords
+
+C F Fm C
+C C/E Fm G C
+C Eb F G C
+C F Ddim G C
+ 
+
+ 
+
+ 
+Branching out from 3 chord songs- secrets of songwriting
+-usually I IV V 
+
+ Use the other diatonic chords.A diatonic chord is simply one that belongs to your key. 
+ So in other words, instead of always giving your audience I-IV-V, try substituting them
+for something else:
+Instead of IV, try the ii-chord or the vi-chord.
+Instead of V, try the iii-chord or the vii-chord.
+Instead of I, try the vi-chord or the IV-chord. 
+(Not all substitutions work in all circumstances. 
+But I-IV-V-I (C-F-G-C) can sound interesting when you change
+it to I-ii-V-I (C-Dm-G-C), or I-vi-iii-IV (C-Am-Em-F), and so on.)
+Use non-diatonic chords. A non-diatonic chord just means that it doesn’t naturally belong to
+ your song’s key. So while that could technically mean any chord, here are the most common:
+  flat-III, flat-VI, flat-VII. The flat-II and flat-VI don’t necessarily act as a substitute for I, IV or V, 
+  but try one of these progressions: I-bIII-IV-I (C-Eb-F-C); I-bIII-bVI-IV-I (C-Eb-Ab-F-C)
+Use secondary dominant chords. To use a secondary dominant chord, try this easy way: Take a chord that’s normally
+ minor in your chosen key, and switch it to being major. Then follow it with a chord whose root is 4 notes higher. 
+ So in the following progression, the D-chord and the E-chord are secondary dominants: C  F  D  G  E  Am  F  G  C.
+Use modal mixture chords. Let’s assume for a moment that you’ve chosen a major key for your song.
+A modal mixture is a situation where you swap the original chord for the version you would have used if your song
+was in a minor key. Sometimes it sounds better to use the original version first, then the modal mixture,
+before moving forward in your progression. Here’s an example, with the modal mixture
+chords underlined: C  F  Fm  C  Am  Dm  Ddim  G  C.
+Use a quick key change. You can take a simple I-IV-V-I progression, then do it again in a different key,
+ then switch back to the original key. All you’re doing is repeating I-IV-V-I, but it sounds new each time you
+  change key. So try this and see if you like it: KEY= C major: C  F  G  C  |Eb  Ab  Bb  Eb  |C  F  G  C… etc. You
+   see that the middle four chords are in the key of Eb major. If you find it a little startling when you hear
+    the key change, try switching to some other key, such as A major or F major

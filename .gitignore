@@ -6,3 +6,5 @@ specialAndAlteredChords.json
 specialKeys.json
 chordPlayability.json
 majorKeysFlatSimple.json
+*.json
+*.pdf

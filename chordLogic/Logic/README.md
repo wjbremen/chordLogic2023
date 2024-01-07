@@ -1543,3 +1543,475 @@ let chords = allMajorKeys;
   }
 ]
 
+
+//////////////////////////////////////////////
+subChords key of a majorKeyObject 
+
+subChords: {
+    scaleDegree1: [{chordObj}, {chordObj}, ..],
+    scaleDegre2: [{chordObj}, {chordObj}, ..], 
+    ...
+    scaleDegree7: [{chordObj}, {chordObj}, ..]
+}
+
+- where chordObj is: 
+
+ {
+      chordRoot: 48,
+      name: '5',
+      htmlName: null,
+      notes: [1,5],
+      chords: [Object]
+  }
+
+- at "chords": 
+
+chords: {
+    '2': {
+      '2-1consec': [Array],
+      '2-1nonconsec': [Array],
+      '2-1inv1consec': [Array],
+      '2-1inv1nonconsec': [Array]
+    },
+    '3': {
+      '3-1consec': [Array],
+      '3-1nonconsec': [Array],
+      '3-1inv1consec': [Array],
+      '3-1inv1nonconsec': [Array],
+      '3-2consec': [Array],
+      '3-2nonconsec': [Array],
+      '3-2inv1consec': [Array],
+      '3-2inv1nonconsec': [Array]
+    },
+    '4': {
+      '4-1consec': [Array],
+      '4-1nonconsec': [Array],
+      '4-1inv1consec': [Array],
+      '4-1inv1nonconsec': [Array],
+      '4-2consec': [Array],
+      '4-2nonconsec': [Array],
+      '4-2inv1consec': [Array],
+      '4-2inv1nonconsec': [Array],
+      '4-3consec': [Array],
+      '4-3nonconsec': [Array],
+      '4-3inv1consec': [Array],
+      '4-3inv1nonconsec': [Array]
+    },
+    '5': {
+      '5-1consec': [Array],
+      '5-1nonconsec': [Array],
+      '5-1inv1consec': [Array],
+      '5-1inv1nonconsec': [Array],
+      '5-2consec': [Array],
+      '5-2nonconsec': [Array],
+      '5-2inv1consec': [Array],
+      '5-2inv1nonconsec': [Array],
+      '5-3consec': [Array],
+      '5-3nonconsec': [Array],
+      '5-3inv1consec': [Array],
+      '5-3inv1nonconsec': [Array],
+      '5-4consec': [Array],
+      '5-4nonconsec': [Array],
+      '5-4inv1consec': [Array],
+      '5-4inv1nonconsec': [Array]
+    },
+    '6': {
+      '6-1consec': [Array],
+      '6-1nonconsec': [Array],
+      '6-1inv1consec': [Array],
+      '6-1inv1nonconsec': [Array],
+      '6-2consec': [Array],
+      '6-2nonconsec': [Array],
+      '6-2inv1consec': [Array],
+      '6-2inv1nonconsec': [Array],
+      '6-3consec': [Array],
+      '6-3nonconsec': [Array],
+      '6-3inv1consec': [Array],
+      '6-3inv1nonconsec': [Array],
+      '6-4consec': [Array],
+      '6-4nonconsec': [Array],
+      '6-4inv1consec': [Array],
+      '6-4inv1nonconsec': [Array],
+      '6-5consec': [Array],
+      '6-5nonconsec': [Array],
+      '6-5inv1consec': [Array],
+      '6-5inv1nonconsec': [Array]
+    }
+  }
+
+
+-at key = "5"
+
+{
+  '5-1consec': [
+    [ 'x', 49, 53, 61, 61, 65 ],
+    [ 'x', 49, 53, 61, 61, 73 ],
+    [ 'x', 49, 53, 61, 65, 65 ],
+    [ 'x', 49, 53, 61, 65, 73 ],
+    [ 'x', 49, 53, 65, 61, 65 ],
+    [ 'x', 49, 53, 65, 61, 73 ],
+    [ 'x', 49, 53, 65, 65, 65 ],
+    [ 'x', 49, 53, 65, 65, 73 ],
+    [ 'x', 49, 61, 61, 61, 65 ],
+    [ 'x', 49, 61, 61, 65, 65 ],
+    [ 'x', 49, 61, 61, 65, 73 ],
+    [ 'x', 49, 61, 65, 61, 65 ],
+    [ 'x', 49, 61, 65, 61, 73 ],
+    [ 'x', 49, 61, 65, 65, 65 ],
+    [ 'x', 49, 61, 65, 65, 73 ]
+  ],
+  '5-1nonconsec': [
+      ........
+  ], 
+  ......
+  '5-4inv1nonconsec': [ [ 'x', 53, 61, 'x', 'x', 'x' ]]
+}
+
+
+
+//////////////////////////////////////////////////
+//// specialAlteredChords 
+//// 
+/////////////////////////////////////////////////
+
+-output from jsonIntermediate/specialAlteredChords.json
+
+{
+
+  '48': [
+    {
+      name: 'dom7b5',
+      htmlName: null,
+      intervals: [Array],
+      integerNotation: [Array],
+      voicings: [Array],
+      integerVoicings: [Array],
+      chords: [Array]
+    },
+    {
+      name: 'dom7#5',
+      htmlName: null,
+      intervals: [Array],
+      integerNotation: [Array],
+      voicings: [Array],
+      integerVoicings: [Array],
+      chords: [Array]
+    },
+    {
+      name: 'dom7b9',
+      htmlName: null,
+      intervals: [Array],
+      integerNotation: [Array],
+      voicings: [Array],
+      integerVoicings: [Array],
+      chords: [Array]
+    },
+    {
+      name: 'dom7#9',
+      htmlName: null,
+      intervals: [Array],
+      integerNotation: [Array],
+      voicings: [Array],
+      integerVoicings: [Array],
+      chords: [Array]
+    },
+    {
+      name: 'minmaj7',
+      htmlName: null,
+      intervals: [Array],
+      integerNotation: [Array],
+      voicings: [Array],
+      integerVoicings: [Array],
+      chords: [Array]
+    }
+  ],
+  '49': [
+    {
+      name: 'dom7b5',
+      htmlName: null,
+      intervals: [Array],
+      integerNotation: [Array],
+      voicings: [Array],
+      integerVoicings: [Array],
+      chords: [Array]
+    },
+    {
+      name: 'dom7#5',
+      htmlName: null,
+      intervals: [Array],
+      integerNotation: [Array],
+      voicings: [Array],
+      integerVoicings: [Array],
+      chords: [Array]
+    },
+    {
+      name: 'dom7b9',
+      htmlName: null,
+      intervals: [Array],
+      integerNotation: [Array],
+      voicings: [Array],
+      integerVoicings: [Array],
+      chords: [Array]
+    },
+    {
+      name: 'dom7#9',
+      htmlName: null,
+      intervals: [Array],
+      integerNotation: [Array],
+      voicings: [Array],
+      integerVoicings: [Array],
+      chords: [Array]
+    },
+    {
+      name: 'minmaj7',
+      htmlName: null,
+      intervals: [Array],
+      integerNotation: [Array],
+      voicings: [Array],
+      integerVoicings: [Array],
+      chords: [Array]
+    }
+  ],
+.....
+.....
+  '59': [
+    {
+      name: 'dom7b5',
+      htmlName: null,
+      intervals: [Array],
+      integerNotation: [Array],
+      voicings: [Array],
+      integerVoicings: [Array],
+      chords: [Array]
+    },
+    ...
+    ...
+    ]
+
+}
+
+- at key = "48"
+
+[
+  {
+    name: 'dom7b5',
+    htmlName: null,
+    intervals: [ 1, 3, 'b5', 'b7' ],
+    integerNotation: [ 0, 4, 6, 10 ],
+    voicings: [ [Array], [Array] ],
+    integerVoicings: [ [Array], [Array] ],
+    chords: [ [Object], [Object] ]
+  },
+  {
+    name: 'dom7#5',
+    htmlName: null,
+    intervals: [ 1, 3, '#5', 'b7' ],
+    integerNotation: [ 0, 4, 6, 10 ],
+    voicings: [ [Array], [Array] ],
+    integerVoicings: [ [Array], [Array] ],
+    chords: [ [Object], [Object] ]
+  },
+  {
+    name: 'dom7b9',
+    htmlName: null,
+    intervals: [ 1, 3, 5, 'b7', 'b9' ],
+    integerNotation: [ 0, 4, 7, 10, 13 ],
+    voicings: [ [Array], [Array], [Array], [Array] ],
+    integerVoicings: [ [Array], [Array], [Array], [Array] ],
+    chords: [ [Object], [Object], [Object], [Object] ]
+  },
+  {
+    name: 'dom7#9',
+    htmlName: null,
+    intervals: [ 1, 3, 5, 'b7', '#9' ],
+    integerNotation: [ 0, 4, 7, 10, 15 ],
+    voicings: [ [Array], [Array], [Array], [Array] ],
+    integerVoicings: [ [Array], [Array], [Array], [Array] ],
+    chords: [ [Object], [Object], [Object], [Object] ]
+  },
+  {
+    name: 'minmaj7',
+    htmlName: null,
+    intervals: [ 1, 'b3', 5, 7 ],
+    integerNotation: [ 0, 3, 7, 11 ],
+    voicings: [ [Array], [Array], [Array], [Array] ],
+    integerVoicings: [ [Array], [Array], [Array], [Array] ],
+    chords: [ [Object], [Object], [Object], [Object] ]
+  }
+]
+
+- at index 0: 
+{
+  name: 'dom7b5',
+  htmlName: null,
+  intervals: [ 1, 3, 'b5', 'b7' ],
+  integerNotation: [ 0, 4, 6, 10 ],
+  voicings: [ [ 1, 3, 'b5', 'b7' ], [ 3, 'b5', 'b7' ] ],
+  integerVoicings: [ [ 0, 4, 6, 10 ], [ 4, 6, 10 ] ],
+  chords: [
+    { integerVoicing: [Array], notes: [Array], chords: [Object] },
+    { integerVoicing: [Array], notes: [Array], chords: [Object] }
+  ]
+}
+
+-at "chords": 
+
+[
+  {
+    integerVoicing: [ 0, 4, 6, 10 ],
+    notes: [ 48, 52, 54, 58 ],
+    chords: {
+      '3': [Object],
+      '4': [Object],
+      '5': [Object],
+      '6': [Object],
+      notes: [Array]
+    }
+  },
+  {
+    integerVoicing: [ 4, 6, 10 ],
+    notes: [ 52, 54, 58 ],
+    chords: {
+      '3': [Object],
+      '4': [Object],
+      '5': [Object],
+      '6': [Object],
+      notes: [Array]
+    }
+  }
+]
+
+- at index 0
+
+{
+  integerVoicing: [ 0, 4, 6, 10 ],
+  notes: [ 48, 52, 54, 58 ],
+  chords: {
+    '3': {
+      '3sRoot': [],
+      '3sRootInv1': [],
+      '3sRootInv2': [],
+      '3sRootInv3': [],
+      '3sRootInv4': [],
+      '3-1': [],
+      '3-1inv1': [],
+      '3-1inv2': [],
+      '3-1inv3': [],
+      '3-1inv4': []
+    },
+    '4': {
+      '4sRoot': [Array],
+      '4sRootInv1': [Array],
+      '4sRootInv2': [Array],
+      '4sRootInv3': [Array],
+      '4sRootInv4': [Array],
+      '4-1': [Array],
+      '4-1inv1': [Array],
+      '4-1inv2': [Array],
+      '4-1inv3': [Array],
+      '4-1inv4': [Array],
+      '4-2': [],
+      '4-2inv1': [],
+      '4-2inv2': [],
+      '4-2inv3': [],
+      '4-2inv4': []
+    },
+    '5': {
+      '5sRoot': [Array],
+      '5sRootInv1': [Array],
+      '5sRootInv2': [Array],
+      '5sRootInv3': [Array],
+      '5sRootInv4': [Array],
+      '5-1': [Array],
+      '5-1inv1': [Array],
+      '5-1inv2': [Array],
+      '5-1inv3': [Array],
+      '5-1inv4': [Array],
+      '5-2': [Array],
+      '5-2inv1': [Array],
+      '5-2inv2': [Array],
+      '5-2inv3': [Array],
+      '5-2inv4': [Array],
+      '5-3': [],
+      '5-3inv1': [],
+      '5-3inv2': [],
+      '5-3inv3': [],
+      '5-3inv4': []
+    },
+    '6': {
+      '6sRoot': [Array],
+      '6sRootInv1': [Array],
+      '6sRootInv2': [Array],
+      '6sRootInv3': [Array],
+      '6sRootInv4': [Array],
+      '6-1': [Array],
+      '6-1inv1': [Array],
+      '6-1inv2': [Array],
+      '6-1inv3': [Array],
+      '6-1inv4': [Array],
+      '6-2': [Array],
+      '6-2inv1': [Array],
+      '6-2inv2': [Array],
+      '6-2inv3': [Array],
+      '6-2inv4': [Array],
+      '6-3': [Array],
+      '6-3inv1': [Array],
+      '6-3inv2': [Array],
+      '6-3inv3': [Array],
+      '6-3inv4': [Array],
+      '6-4': [],
+      '6-4inv1': [],
+      '6-4inv2': [],
+      '6-4inv3': [],
+      '6-4inv4': []
+    },
+    notes: [ 48, 52, 54, 58 ]
+  }
+}
+
+-at ["chords"]["6"]
+
+'6sRoot': [
+    [ 8, 7, 10, 9, 7, 6 ],
+    [ 8, 7, 10, 11, 11, 8 ],
+    [ 8, 7, 10, 11, 11, 'o' ],
+    [ 8, 7, 10, 11, 11, 'x' ],
+    [ 8, 7, 10, 'x', 7, 6 ],
+    [ 8, 7, 4, 5, 5, 6 ],
+    [ 8, 7, 4, 5, 7, 6 ],
+    [ 8, 7, 4, 5, 'x', 6 ],
+    [ 8, 7, 4, 'x', 5, 6 ],
+    [ 8, 7, 4, 'x', 7, 6 ],
+    [ 8, 7, 4, 'x', 'x', 6 ],
+    [ 8, 7, 8, 5, 7, 8 ],
+    [ 8, 7, 8, 5, 7, 'o' ],
+    [ 8, 7, 8, 5, 7, 6 ],
+    [ 8, 7, 8, 5, 7, 'x' ],
+    [ 8, 7, 8, 9, 7, 8 ],
+    [ 8, 7, 8, 9, 7, 'o' ],
+    [ 8, 7, 8, 9, 7, 6 ],
+    [ 8, 7, 8, 9, 7, 'x' ],
+    [ 8, 7, 8, 11, 7, 8 ],
+    [ 8, 7, 8, 11, 7, 'o' ],
+    .......
+  ], 
+
+  '6sRootInv1': [
+    [ 'o', 7, 4, 5, 5, 6 ],
+    [ 'o', 7, 4, 5, 7, 6 ],
+    [ 'o', 7, 4, 5, 'x', 6 ],
+    [ 'o', 7, 8, 9, 7, 8 ],
+    [ 'o', 7, 8, 11, 7, 8 ],
+    [ 'o', 7, 8, 11, 11, 8 ],
+    [ 'o', 7, 8, 11, 'x', 8 ],
+    [ 'o', 7, 8, 5, 7, 'o' ],
+    [ 'o', 7, 8, 5, 7, 6 ],
+    [ 'o', 7, 8, 5, 7, 8 ],
+    [ 'o', 7, 8, 5, 7, 'x' ],
+    [ 'o', 7, 8, 'x', 7, 8 ],
+    [ 'o', 7, 10, 9, 7, 6 ],
+    [ 'o', 7, 10, 11, 11, 'o' ],
+    ......
+    ]
+
+    etc 
