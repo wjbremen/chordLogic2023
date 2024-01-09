@@ -1,0 +1,34 @@
+-chord counts: 
+
+{
+  unplayableChords: {
+    chords: 165605,
+    extendedChords: 479940,
+    subChords: 30156,
+    specialChords: 54304
+  },
+  playableChords: {
+    chords: 505135,
+    extendedChords: 1018095,
+    subChords: 57540,
+    specialChords: 100452
+  }
+}
+
+-playableChordsFlat: 
+
+100 displayed + ... 1681122 more items
+= 1,681,222
+
+-unplayableChordsFlat: 
+
+100 + ... 729905 more items
+= 730,005
+
+-chordCounts totals: 
+
+unplayableChords: 
+165605 + 479940 + 30156 + 54304 = 730,005 -> equal to length of unplayableChordsFlat 
+
+playableChords: 
+505135 + 1018095 + 57540 + 100452 = 1,681,222 -> equal to length of playableChordsFlat

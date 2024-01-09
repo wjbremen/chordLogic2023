@@ -399,7 +399,7 @@ function writeToJson(){
     });
     
     //write to chord counts
-    let counts = [chordPlayabilityInfo["unplayableChordsCount"], chordPlayabilityInfo["playableChordsCount"]];
+    let counts = { unplayableChords: chordPlayabilityInfo["unplayableChordsCount"],playableChords: chordPlayabilityInfo["playableChordsCount"]};
     fs.writeFile('../jsonOutput/chordPlayability/chordCounts.json', JSON.stringify(counts), (error) => {
         if (error) throw error;
     });
